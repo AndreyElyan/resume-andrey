@@ -93,6 +93,6 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou pul
 
 ## 📞 Contato
 
-- **Email**: andrey.elyan@email.com
+- **Email**: andreyelyan.contato@gmail.com
 - **LinkedIn**: [linkedin.com/in/andreyelyan](https://linkedin.com/in/andreyelyan)
 - **GitHub**: [github.com/andreyelyan](https://github.com/andreyelyan)

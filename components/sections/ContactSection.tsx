@@ -9,8 +9,8 @@ const ContactSection = () => {
     {
       name: t("contact.email"),
       icon: Mail,
-      href: "mailto:andrey.elyan@email.com",
-      description: "andrey.elyan@email.com",
+      href: "mailto:andreyelyan.contato@gmail.com",
+      description: "andreyelyan.contato@gmail.com",
     },
     {
       name: t("contact.linkedin"),
@@ -27,8 +27,8 @@ const ContactSection = () => {
     {
       name: t("contact.whatsapp"),
       icon: MessageCircle,
-      href: "https://wa.me/5511999999999",
-      description: "+55 11 99999-9999",
+      href: "https://wa.me/5551985809513",
+      description: "(51) 98580-9513",
     },
   ];
 
