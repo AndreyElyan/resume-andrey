@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslation } from "next-i18next";
 import {
   SiReact,
@@ -170,20 +170,16 @@ const TechIcon = ({
   return (
     <motion.div
       className="relative group"
-      initial={{ opacity: 0, scale: 0.8 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.4, delay }}
-      whileHover={{ scale: 1.05 }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.3, delay }}
+      whileHover={{ scale: 1.02 }}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
     >
-      <motion.div
-        className={`flex flex-col items-center ${sizeClasses.container} bg-white/10 dark:bg-gray-800/20 rounded-xl backdrop-blur-sm border ${categoryColor} cursor-pointer transition-all duration-300`}
-        whileHover={{
-          backgroundColor: "rgba(255, 255, 255, 0.15)",
-          borderColor: "rgba(255, 255, 255, 0.3)",
-        }}
+      <div
+        className={`flex flex-col items-center ${sizeClasses.container} bg-white/10 dark:bg-gray-800/20 rounded-xl backdrop-blur-sm border ${categoryColor} cursor-pointer transition-all duration-300 hover:bg-white/15 hover:border-white/30`}
       >
         <div className={`mb-2 flex-shrink-0 ${sizeClasses.icon}`}>
           {getIconComponent(icon)}
@@ -193,7 +189,7 @@ const TechIcon = ({
         >
           {name}
         </span>
-      </motion.div>
+      </div>
 
       <AnimatePresence>
         {isHovered && (
@@ -238,10 +234,10 @@ const TechCategory = ({
 }: TechCategoryProps) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.6, delay }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.4, delay }}
       className="bg-white/5 dark:bg-gray-800/30 rounded-xl p-4 sm:p-6 border border-white/10 dark:border-gray-700/20 backdrop-blur-sm"
     >
       <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 flex items-center">
@@ -269,6 +265,11 @@ const TechCategory = ({
 const TechStackCloud = () => {
   const { t } = useTranslation("common");
   const [activeTab, setActiveTab] = useState("core");
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const getCategoryData = (categoryKey: string) => {
     try {
@@ -354,6 +355,16 @@ const TechStackCloud = () => {
       category: "database",
     },
   ];
+
+  if (!isClient) {
+    return (
+      <div className="animate-pulse">
+        <div className="h-8 bg-gray-700 rounded mb-4 w-1/3"></div>
+        <div className="h-4 bg-gray-700 rounded mb-6 w-2/3"></div>
+        <div className="h-32 bg-gray-700 rounded"></div>
+      </div>
+    );
+  }
 
   return (
     <>

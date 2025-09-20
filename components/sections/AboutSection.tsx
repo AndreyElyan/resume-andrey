@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "next-i18next";
 import OptimizedImage from "../OptimizedImage";
-import TechStackCloud from "../TechStackCloud";
+import TechStackCloud from "../TechStackCloudWrapper";
 
 const AboutSection = () => {
   const { t } = useTranslation("common");
