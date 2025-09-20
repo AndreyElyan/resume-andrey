@@ -114,7 +114,12 @@
         },
         "hardware": {
           "title": "RFID & Hardware",
-          "items": ["Tags EPC", "Impressoras SATO", "Leitores Bluebird", "Hardware Accura"]
+          "items": [
+            "Tags EPC",
+            "Impressoras SATO",
+            "Leitores Bluebird",
+            "Hardware Accura"
+          ]
         }
       },
       "results": {

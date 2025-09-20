@@ -77,11 +77,9 @@ const ProjectsSection = () => {
                 </h4>
                 <div className="bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 p-6 rounded-r-lg">
                   <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                    <strong>Grupo Boticário</strong> {t("projects.gbRastreio.challenge.problem")}
-                    <strong>
-                      {" "}
-                      {t("projects.gbRastreio.challenge.scale")}
-                    </strong>
+                    <strong>Grupo Boticário</strong>{" "}
+                    {t("projects.gbRastreio.challenge.problem")}
+                    <strong> {t("projects.gbRastreio.challenge.scale")}</strong>
                     .
                   </p>
                   <p className="text-gray-600 dark:text-gray-400">
@@ -264,7 +262,7 @@ const ProjectsSection = () => {
                   <div className="space-y-6">
                     <div className="bg-purple-50 dark:bg-purple-900/20 border-l-4 border-purple-500 p-6 rounded-r-lg">
                       <h5 className="font-bold text-purple-800 dark:text-purple-200 mb-2">
-                        🎯 Business Impact
+                        🎯 {t("projects.gbRastreio.results.business.title")}
                       </h5>
                       <ul className="text-purple-700 dark:text-purple-300 space-y-1">
                         <li>
@@ -284,7 +282,7 @@ const ProjectsSection = () => {
 
                     <div className="bg-orange-50 dark:bg-orange-900/20 border-l-4 border-orange-500 p-6 rounded-r-lg">
                       <h5 className="font-bold text-orange-800 dark:text-orange-200 mb-2">
-                        🔒 Security & Reliability
+                        🔒 {t("projects.gbRastreio.results.security.title")}
                       </h5>
                       <ul className="text-orange-700 dark:text-orange-300 space-y-1">
                         <li>
@@ -306,31 +304,28 @@ const ProjectsSection = () => {
               <div className="mb-12">
                 <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
                   <span className="text-3xl mr-4">⭐</span>
-                  Technical Highlights
+                  {t("projects.gbRastreio.highlights.title")}
                 </h4>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   <div className="bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-900/20 rounded-xl p-6">
                     <h5 className="font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                       <span className="text-xl mr-2">🏗️</span>
-                      Data Lake Migration
+                      {t("projects.gbRastreio.highlights.dataLake.title")}
                     </h5>
                     <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
-                      Separated OLTP from analytics by migrating historical data
-                      from DynamoDB to S3 + Athena with Parquet format. Achieved
-                      12× compression ratio and columnar optimization for
-                      faster, cheaper queries.
+                      {t("projects.gbRastreio.highlights.dataLake.description")}
                     </p>
                   </div>
 
                   <div className="bg-gradient-to-br from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 rounded-xl p-6">
                     <h5 className="font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                       <span className="text-xl mr-2">🏷️</span>
-                      RFID Tag Service
+                      {t("projects.gbRastreio.highlights.tagService.title")}
                     </h5>
                     <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
-                      Built robust EPC generation and serialization system with
-                      batch processing, TTL management, and hardware integration
-                      for industrial RFID printers and readers.
+                      {t(
+                        "projects.gbRastreio.highlights.tagService.description",
+                      )}
                     </p>
                   </div>
                 </div>
@@ -340,7 +335,7 @@ const ProjectsSection = () => {
               <div className="mb-12">
                 <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
                   <span className="text-3xl mr-4">🔧</span>
-                  RFID Hardware Integration
+                  {t("projects.gbRastreio.hardwareIntegration.title")}
                 </h4>
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
                   <div className="bg-gray-50 dark:bg-dark-700 rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
@@ -350,10 +345,14 @@ const ProjectsSection = () => {
                       className="h-16 w-auto mx-auto mb-4"
                     />
                     <h6 className="font-semibold text-gray-900 dark:text-white mb-2">
-                      SATO RFID Printer
+                      {t(
+                        "projects.gbRastreio.hardwareIntegration.devices.sato.name",
+                      )}
                     </h6>
                     <p className="text-sm text-gray-600 dark:text-gray-400">
-                      Industrial tag printing & encoding
+                      {t(
+                        "projects.gbRastreio.hardwareIntegration.devices.sato.description",
+                      )}
                     </p>
                   </div>
                   <div className="bg-gray-50 dark:bg-dark-700 rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
@@ -363,10 +362,14 @@ const ProjectsSection = () => {
                       className="h-16 w-auto mx-auto mb-4"
                     />
                     <h6 className="font-semibold text-gray-900 dark:text-white mb-2">
-                      Bluebird RFR900
+                      {t(
+                        "projects.gbRastreio.hardwareIntegration.devices.bluebird.name",
+                      )}
                     </h6>
                     <p className="text-sm text-gray-600 dark:text-gray-400">
-                      Mobile RFID reader device
+                      {t(
+                        "projects.gbRastreio.hardwareIntegration.devices.bluebird.description",
+                      )}
                     </p>
                   </div>
                   <div className="bg-gray-50 dark:bg-dark-700 rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
@@ -376,10 +379,14 @@ const ProjectsSection = () => {
                       className="h-16 w-auto mx-auto mb-4"
                     />
                     <h6 className="font-semibold text-gray-900 dark:text-white mb-2">
-                      Accura HexaPad
+                      {t(
+                        "projects.gbRastreio.hardwareIntegration.devices.hexapad.name",
+                      )}
                     </h6>
                     <p className="text-sm text-gray-600 dark:text-gray-400">
-                      RFID antenna pad
+                      {t(
+                        "projects.gbRastreio.hardwareIntegration.devices.hexapad.description",
+                      )}
                     </p>
                   </div>
                   <div className="bg-gray-50 dark:bg-dark-700 rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
@@ -389,10 +396,14 @@ const ProjectsSection = () => {
                       className="h-16 w-auto mx-auto mb-4"
                     />
                     <h6 className="font-semibold text-gray-900 dark:text-white mb-2">
-                      Accura R700 Reader
+                      {t(
+                        "projects.gbRastreio.hardwareIntegration.devices.r700.name",
+                      )}
                     </h6>
                     <p className="text-sm text-gray-600 dark:text-gray-400">
-                      UHF RFID reader
+                      {t(
+                        "projects.gbRastreio.hardwareIntegration.devices.r700.description",
+                      )}
                     </p>
                   </div>
                 </div>
@@ -428,7 +439,7 @@ const ProjectsSection = () => {
                     className="btn-primary flex items-center px-6 py-3 text-lg"
                   >
                     <span className="mr-2">🌐</span>
-                    View Live Platform
+                    {t("projects.gbRastreio.viewPlatform")}
                   </a>
                 </div>
               </div>
