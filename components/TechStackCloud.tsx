@@ -63,6 +63,13 @@ const TechIcon = ({
 }: TechIconProps) => {
   const [isHovered, setIsHovered] = useState(false);
 
+  // Validação de parâmetros para evitar erros
+  const safeSize = size || "medium";
+  const safeCategory = category || "others";
+  const safeName = name || "Unknown";
+  const safeIcon = icon || "javascript";
+  const safeStory = story || "Technology description";
+
   const getIconComponent = (iconName: string) => {
     const iconMap: Record<string, { component: any; className: string }> = {
       react: { component: SiReact, className: "text-blue-500" },
@@ -127,7 +134,7 @@ const TechIcon = ({
   };
 
   const getSizeClasses = () => {
-    switch (size) {
+    switch (safeSize) {
       case "large":
         return {
           container: "p-4 sm:p-6 min-h-[100px] sm:min-h-[120px]",
@@ -146,11 +153,17 @@ const TechIcon = ({
           icon: "text-xl sm:text-2xl",
           text: "text-xs font-medium",
         };
+      default:
+        return {
+          container: "p-3 sm:p-4 min-h-[80px] sm:min-h-[100px]",
+          icon: "text-2xl sm:text-3xl",
+          text: "text-xs sm:text-sm font-medium",
+        };
     }
   };
 
   const getCategoryColor = () => {
-    switch (category) {
+    switch (safeCategory) {
       case "frontend":
         return "border-blue-500/30 bg-blue-500/5";
       case "backend":
@@ -166,8 +179,12 @@ const TechIcon = ({
     }
   };
 
-  const sizeClasses = getSizeClasses();
-  const categoryColor = getCategoryColor();
+  const sizeClasses = getSizeClasses() || {
+    container: "p-3 sm:p-4 min-h-[80px] sm:min-h-[100px]",
+    icon: "text-2xl sm:text-3xl",
+    text: "text-xs sm:text-sm font-medium",
+  };
+  const categoryColor = getCategoryColor() || "border-gray-500/30 bg-gray-500/5";
 
   return (
     <div
@@ -183,12 +200,12 @@ const TechIcon = ({
         className={`flex flex-col items-center ${sizeClasses.container} bg-white/10 dark:bg-gray-800/20 rounded-xl backdrop-blur-sm border ${categoryColor} cursor-pointer transition-all duration-300 hover:bg-white/15 hover:border-white/30`}
       >
         <div className={`mb-2 flex-shrink-0 ${sizeClasses.icon}`}>
-          {getIconComponent(icon)}
+          {getIconComponent(safeIcon)}
         </div>
         <span
           className={`${sizeClasses.text} text-white text-center leading-tight`}
         >
-          {name}
+          {safeName}
         </span>
       </div>
 
@@ -196,7 +213,7 @@ const TechIcon = ({
         <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 z-50 animate-in fade-in-0 slide-in-from-bottom-2 duration-200">
           <div className="bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 px-3 py-2 sm:px-4 sm:py-3 rounded-lg shadow-xl border border-gray-700 dark:border-gray-300 max-w-xs sm:max-w-sm">
             <div className="text-xs text-gray-300 dark:text-gray-600 leading-relaxed">
-              {story}
+              {safeStory}
             </div>
             <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900 dark:border-t-gray-100"></div>
           </div>
