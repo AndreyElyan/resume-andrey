@@ -1,4 +1,6 @@
-import { motion, AnimatePresence } from "framer-motion";
+"use client";
+
+// Removed Framer Motion imports to fix SSR issues
 import { useState, useEffect } from "react";
 import { useTranslation } from "next-i18next";
 import {
@@ -168,15 +170,14 @@ const TechIcon = ({
   const categoryColor = getCategoryColor();
 
   return (
-    <motion.div
+    <div
       className="relative group"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.3, delay }}
-      whileHover={{ scale: 1.02 }}
-      onHoverStart={() => setIsHovered(true)}
-      onHoverEnd={() => setIsHovered(false)}
+      role="button"
+      tabIndex={0}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      onFocus={() => setIsHovered(true)}
+      onBlur={() => setIsHovered(false)}
     >
       <div
         className={`flex flex-col items-center ${sizeClasses.container} bg-white/10 dark:bg-gray-800/20 rounded-xl backdrop-blur-sm border ${categoryColor} cursor-pointer transition-all duration-300 hover:bg-white/15 hover:border-white/30`}
@@ -191,25 +192,17 @@ const TechIcon = ({
         </span>
       </div>
 
-      <AnimatePresence>
-        {isHovered && (
-          <motion.div
-            initial={{ opacity: 0, y: 10, scale: 0.9 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 10, scale: 0.9 }}
-            transition={{ duration: 0.2 }}
-            className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 z-50"
-          >
-            <div className="bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 px-3 py-2 sm:px-4 sm:py-3 rounded-lg shadow-xl border border-gray-700 dark:border-gray-300 max-w-xs sm:max-w-sm">
-              <div className="text-xs text-gray-300 dark:text-gray-600 leading-relaxed">
-                {story}
-              </div>
-              <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900 dark:border-t-gray-100"></div>
+      {isHovered && (
+        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 z-50 animate-in fade-in-0 slide-in-from-bottom-2 duration-200">
+          <div className="bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 px-3 py-2 sm:px-4 sm:py-3 rounded-lg shadow-xl border border-gray-700 dark:border-gray-300 max-w-xs sm:max-w-sm">
+            <div className="text-xs text-gray-300 dark:text-gray-600 leading-relaxed">
+              {story}
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.div>
+            <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900 dark:border-t-gray-100"></div>
+          </div>
+        </div>
+      )}
+    </div>
   );
 };
 
@@ -233,13 +226,7 @@ const TechCategory = ({
   delay,
 }: TechCategoryProps) => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.4, delay }}
-      className="bg-white/5 dark:bg-gray-800/30 rounded-xl p-4 sm:p-6 border border-white/10 dark:border-gray-700/20 backdrop-blur-sm"
-    >
+    <div className="bg-white/5 dark:bg-gray-800/30 rounded-xl p-4 sm:p-6 border border-white/10 dark:border-gray-700/20 backdrop-blur-sm">
       <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 flex items-center">
         <span className="text-2xl mr-2">{icon}</span>
         {title}
@@ -254,11 +241,11 @@ const TechCategory = ({
             story={tech.story}
             size={tech.size}
             category={tech.category}
-            delay={delay + 0.3 + index * 0.05}
+            delay={0}
           />
         ))}
       </div>
-    </motion.div>
+    </div>
   );
 };
 
@@ -368,25 +355,11 @@ const TechStackCloud = () => {
 
   return (
     <>
-      <motion.h3
-        className="text-2xl font-bold mb-4"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.3 }}
-      >
-        {t("about.techStack.title")}
-      </motion.h3>
+      <h3 className="text-2xl font-bold mb-4">{t("about.techStack.title")}</h3>
 
-      <motion.p
-        className="text-gray-300 text-xs sm:text-sm leading-relaxed mb-6"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.4 }}
-      >
+      <p className="text-gray-300 text-xs sm:text-sm leading-relaxed mb-6">
         {t("about.techStack.subtitle")}
-      </motion.p>
+      </p>
 
       {/* Tabs Navigation */}
       <div className="mb-6">
@@ -434,7 +407,7 @@ const TechStackCloud = () => {
                   story={tech.story}
                   size={tech.size}
                   category={tech.category}
-                  delay={0.1 + index * 0.1}
+                  delay={0}
                 />
               ))}
             </div>
@@ -449,7 +422,7 @@ const TechStackCloud = () => {
                   title={category.title}
                   icon={category.icon}
                   technologies={category.technologies}
-                  delay={0.1}
+                  delay={0}
                 />
               ))}
           </div>
