@@ -83,24 +83,108 @@
   },
   "projects": {
     "title": "Featured Projects",
-    "viewCode": "View Code",
-    "liveDemo": "Live Demo",
-    "items": {
-      "microservice": {
-        "title": "E-commerce Microservice",
-        "description": "Scalable NestJS microservice with AWS Lambda, API Gateway, and DynamoDB for handling high-traffic e-commerce operations.",
-        "tech": "NestJS, AWS Lambda, DynamoDB, TypeScript"
+    "gbRastreio": {
+      "title": "GB Rastreio – RFID Traceability Platform",
+      "subtitle": "Grupo Boticário • Jan 2024 - Present • Backend/Cloud Lead",
+      "description": "End-to-end RFID solution for Grupo Boticário to ensure inventory accuracy, improve traceability and reduce operational costs across distribution centers and factories.",
+      "challenge": {
+        "title": "Challenge & Context",
+        "problem": "Grupo Boticário faced lack of inventory visibility, product losses, and frequent inventory failures due to limited barcode/etiquette systems across",
+        "scale": "15+ distribution centers, 3 factories, and 4,000+ stores",
+        "technical": "High query performance and cost problems using DynamoDB-centric architecture for analytics workloads."
       },
-      "dashboard": {
-        "title": "Analytics Dashboard",
-        "description": "Real-time React dashboard with data visualization, user management, and responsive design for business intelligence.",
-        "tech": "React, TypeScript, Chart.js, TailwindCSS"
+      "contribution": {
+        "title": "My Technical Contribution",
+        "architecture": "Architecture Design: Led microservices architecture in NestJS with Clean Architecture + DDD",
+        "aws": "AWS Strategy: Designed serverless workloads with Lambda, API Gateway, DynamoDB",
+        "migration": "Data Migration: Proposed and implemented DynamoDB → S3 + Athena migration for analytics",
+        "tagService": "Tag Service: Built robust EPC generation and serialization system",
+        "security": "Security: Implemented granular RBAC with JSONB policies (ABAC)",
+        "rfid": "RFID Integration: Designed middleware for hardware communication"
       },
-      "rfid": {
-        "title": "RFID Integration System",
-        "description": "Complete RFID data pipeline system for retail operations with real-time processing and analytics.",
-        "tech": "Node.js, AWS Kinesis, PostgreSQL, Docker"
-      }
+      "technologies": {
+        "title": "Technologies & Architecture",
+        "backend": {
+          "title": "Backend & APIs",
+          "items": ["NestJS", "Node.js", "TypeScript", "GraphQL"]
+        },
+        "cloud": {
+          "title": "AWS Cloud",
+          "items": ["Lambda", "API Gateway", "S3 + Athena", "DynamoDB"]
+        },
+        "hardware": {
+          "title": "RFID & Hardware",
+          "items": ["EPC Tags", "SATO Printers", "Bluebird Readers", "Accura Hardware"]
+        }
+      },
+      "results": {
+        "title": "Results & Business Impact",
+        "scale": {
+          "title": "Scale & Performance",
+          "items": [
+            "~15 million RFID tags processed monthly",
+            "Hours → Minutes: Analytics reports now ready in minutes vs hours",
+            "99.9% system uptime with serverless architecture"
+          ]
+        },
+        "cost": {
+          "title": "Cost Optimization",
+          "items": [
+            "~91% reduction in storage costs (DynamoDB → S3)",
+            "~92% cheaper query costs with Parquet compression",
+            "~40-60% overall operational cost savings"
+          ]
+        },
+        "business": {
+          "title": "Business Impact",
+          "items": [
+            "Significant reduction in inventory errors",
+            "Improved stockout prevention in stores",
+            "Enhanced traceability across supply chain"
+          ]
+        },
+        "security": {
+          "title": "Security & Reliability",
+          "items": [
+            "Granular RBAC with JSONB policies",
+            "Real-time monitoring and alerting",
+            "Fault-tolerant microservices design"
+          ]
+        }
+      },
+      "highlights": {
+        "title": "Technical Highlights",
+        "dataLake": {
+          "title": "Data Lake Migration",
+          "description": "Separated OLTP from analytics by migrating historical data from DynamoDB to S3 + Athena with Parquet format. Achieved 12× compression ratio and columnar optimization for faster, cheaper queries."
+        },
+        "tagService": {
+          "title": "RFID Tag Service",
+          "description": "Built robust EPC generation and serialization system with batch processing, TTL management, and hardware integration for industrial RFID printers and readers."
+        }
+      },
+      "hardwareIntegration": {
+        "title": "RFID Hardware Integration",
+        "devices": {
+          "sato": {
+            "name": "SATO RFID Printer",
+            "description": "Industrial tag printing & encoding"
+          },
+          "bluebird": {
+            "name": "Bluebird RFR900",
+            "description": "Mobile RFID reader device"
+          },
+          "hexapad": {
+            "name": "Accura HexaPad",
+            "description": "RFID antenna pad"
+          },
+          "r700": {
+            "name": "Accura R700 Reader",
+            "description": "UHF RFID reader"
+          }
+        }
+      },
+      "viewPlatform": "View Live Platform"
     }
   },
   "skills": {
