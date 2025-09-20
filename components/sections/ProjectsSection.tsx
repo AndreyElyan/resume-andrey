@@ -34,30 +34,6 @@ const ProjectsSection = () => {
             transition={{ duration: 0.6 }}
             className="mt-16 max-w-7xl mx-auto space-y-12 px-4 sm:px-0"
           >
-            {/* Back to Navigator Button */}
-            <div className="flex justify-center mb-8 px-4 sm:px-0">
-              <motion.button
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => setSelectedProject(null)}
-                className="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-gray-100 dark:bg-dark-700 hover:bg-gray-200 dark:hover:bg-dark-600 text-gray-700 dark:text-gray-300 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-xl border border-gray-200 dark:border-dark-600 text-sm sm:text-base"
-              >
-                <svg
-                  className="w-4 h-4 sm:w-5 sm:h-5 mr-2"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M10 19l-7-7m0 0l7-7m-7 7h18"
-                  />
-                </svg>
-                Voltar ao Navegador
-              </motion.button>
-            </div>
             {/* GB Rastreio Project */}
             {selectedProject === "gbRastreio" && (
               <div className="bg-white dark:bg-dark-800 rounded-3xl shadow-2xl overflow-hidden border border-gray-200 dark:border-dark-700">

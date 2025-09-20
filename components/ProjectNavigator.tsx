@@ -115,6 +115,13 @@ const ProjectNavigator = ({
     }
   }, [currentProject, projects]);
 
+  // Auto-load first project on mount
+  useEffect(() => {
+    if (projects.length > 0 && !currentProject) {
+      onProjectSelect(projects[0].id);
+    }
+  }, [projects, currentProject, onProjectSelect]);
+
   const nextProject = () => {
     const newIndex = (currentIndex + 1) % projects.length;
     setCurrentIndex(newIndex);
@@ -147,7 +154,7 @@ const ProjectNavigator = ({
   const currentProjectData = projects[currentIndex];
 
   return (
-    <div className="w-full overflow-x-hidden">
+    <div className="w-full">
       {/* Project Navigator Header */}
       <div className="text-center mb-8 sm:mb-12 px-4 sm:px-0">
         <motion.h2
@@ -202,7 +209,7 @@ const ProjectNavigator = ({
       </div>
 
       {/* Project Carousel */}
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-0">
+      <div className="relative max-w-6xl mx-auto px-4 sm:px-0 overflow-hidden">
         {/* Navigation Arrows - Hidden on mobile */}
         <button
           onClick={previousProject}
@@ -219,7 +226,7 @@ const ProjectNavigator = ({
         </button>
 
         {/* Project Cards Container */}
-        <div className="overflow-x-hidden py-2">
+        <div className="overflow-hidden py-2">
           <motion.div
             className="flex transform-gpu will-change-transform"
             animate={{
@@ -360,16 +367,43 @@ const ProjectNavigator = ({
                   onProjectSelect(project.id);
                 }
               }}
-              className={`relative px-3 sm:px-4 py-2 rounded-full transition-all duration-300 ${
+              className={`relative px-2 sm:px-4 py-1.5 sm:py-2 rounded-full transition-all duration-300 ${
                 index === currentIndex
                   ? "bg-blue-600 text-white shadow-lg scale-105"
                   : "bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600"
               }`}
             >
-              <span className="text-xs sm:text-sm font-medium">
-                {project.id === "gbRastreio" && "GB Rastreio"}
-                {project.id === "vendaUnificada" && "Venda Unificada"}
-                {project.id === "caixaAutoatendimento" && "Autoatendimento"}
+              <span className="text-xs font-medium">
+                {project.id === "gbRastreio" && (
+                  <>
+                    <span className="hidden sm:inline">
+                      {t("projects.gbRastreio.title")}
+                    </span>
+                    <span className="sm:hidden">
+                      {t("projects.gbRastreio.shortTitle")}
+                    </span>
+                  </>
+                )}
+                {project.id === "vendaUnificada" && (
+                  <>
+                    <span className="hidden sm:inline">
+                      {t("projects.vendaUnificada.title")}
+                    </span>
+                    <span className="sm:hidden">
+                      {t("projects.vendaUnificada.shortTitle")}
+                    </span>
+                  </>
+                )}
+                {project.id === "caixaAutoatendimento" && (
+                  <>
+                    <span className="hidden sm:inline">
+                      {t("projects.caixaAutoatendimento.title")}
+                    </span>
+                    <span className="sm:hidden">
+                      {t("projects.caixaAutoatendimento.shortTitle")}
+                    </span>
+                  </>
+                )}
               </span>
               {index === currentIndex && (
                 <motion.div

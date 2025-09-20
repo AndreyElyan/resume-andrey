@@ -76,8 +76,8 @@
       "bll": {
         "company": "BLL",
         "period": "2013 - 2014",
-        "role": "Junior Developer",
-        "description": "Started my career developing basic web applications and learning software development fundamentals."
+        "role": "IT Support",
+        "description": "Provided technical support and maintained computer systems."
       }
     }
   },
@@ -99,6 +99,7 @@
     },
     "gbRastreio": {
       "title": "GB Rastreio – RFID Traceability Platform",
+      "shortTitle": "GB Rastreio",
       "subtitle": "Grupo Boticário • Jan 2024 - Present • Backend/Cloud Lead",
       "description": "End-to-end RFID solution for Grupo Boticário to ensure inventory accuracy, improve traceability and reduce operational costs across distribution centers and factories.",
       "challenge": {
@@ -214,6 +215,7 @@
     },
     "caixaAutoatendimento": {
       "title": "Self-Checkout with RFID – Innovation in Retail",
+      "shortTitle": "Self-Checkout",
       "subtitle": "Lojas Renner • 2021-2023 • Full-Stack Developer",
       "description": "Revolutionary self-checkout project implementing RFID technology in Brazilian fashion retail, providing customers with an innovative, agile, and efficient shopping experience.",
       "challenge": {
@@ -353,6 +355,7 @@
     },
     "vendaUnificada": {
       "title": "Venda Unificada – Omni Sale Platform",
+      "shortTitle": "Omni Sale",
       "subtitle": "Lojas Renner • Apr 2023 - Present • Full-Stack Developer",
       "description": "Innovative omnichannel sales platform integrating physical and digital channels to provide a unified and convenient shopping experience for Lojas Renner customers.",
       "challenge": {

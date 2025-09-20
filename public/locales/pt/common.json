@@ -76,8 +76,8 @@
       "bll": {
         "company": "BLL",
         "period": "2013 - 2014",
-        "role": "Desenvolvedor Júnior",
-        "description": "Iniciei minha carreira desenvolvendo aplicações web básicas e aprendendo fundamentos de desenvolvimento de software."
+        "role": "Suporte de TI",
+        "description": "Forneci suporte técnico e mantive sistemas de computador."
       }
     }
   },
@@ -99,6 +99,7 @@
     },
     "gbRastreio": {
       "title": "GB Rastreio – Plataforma de Rastreabilidade RFID",
+      "shortTitle": "GB Rastreio",
       "subtitle": "Grupo Boticário • Jan 2024 - Presente • Líder Backend/Cloud",
       "description": "Solução RFID ponta a ponta para o Grupo Boticário garantir precisão de inventário, melhorar rastreabilidade e reduzir custos operacionais em centros de distribuição e fábricas.",
       "challenge": {
@@ -214,6 +215,7 @@
     },
     "caixaAutoatendimento": {
       "title": "Caixa de Autoatendimento com RFID – Inovação no Varejo",
+      "shortTitle": "Autoatendimento",
       "subtitle": "Lojas Renner • 2021-2023 • Desenvolvedor Full-Stack",
       "description": "Projeto revolucionário de autoatendimento implementando tecnologia RFID no varejo de moda brasileiro, proporcionando aos clientes uma experiência de compra inovadora, ágil e eficiente.",
       "challenge": {
@@ -353,6 +355,7 @@
     },
     "vendaUnificada": {
       "title": "Venda Unificada – Plataforma Omni Sale",
+      "shortTitle": "Venda Unificada",
       "subtitle": "Lojas Renner • Abr 2023 - Presente • Desenvolvedor Full-Stack",
       "description": "Plataforma inovadora de vendas omnichannel integrando canais físicos e digitais para proporcionar uma experiência de compra unificada e conveniente para clientes da Lojas Renner.",
       "challenge": {
