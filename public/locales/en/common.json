@@ -83,6 +83,20 @@
   },
   "projects": {
     "title": "Featured Projects",
+    "navigation": {
+      "title": "Project Navigator",
+      "subtitle": "Explore my featured projects",
+      "selectProject": "Select a project to view details",
+      "currentProject": "Currently viewing",
+      "viewDetails": "Explore Project",
+      "closePreview": "Close Preview",
+      "nextProject": "Next Project",
+      "previousProject": "Previous Project",
+      "projectOverview": "Project Overview",
+      "technologies": "Technologies",
+      "results": "Key Results",
+      "autoLoad": "Auto-load"
+    },
     "gbRastreio": {
       "title": "GB Rastreio – RFID Traceability Platform",
       "subtitle": "Grupo Boticário • Jan 2024 - Present • Backend/Cloud Lead",
@@ -181,7 +195,22 @@
           }
         }
       },
-      "viewPlatform": "View Live Platform"
+      "viewPlatform": "View Live Platform",
+      "screenshot": {
+        "title": "Platform Interface",
+        "subtitle": "Modern and intuitive user experience",
+        "description": "Clean and functional interface designed for RFID tag management, providing real-time monitoring and comprehensive traceability controls."
+      },
+      "printing": {
+        "title": "RFID Tag Printing Process",
+        "subtitle": "Industrial printing and encoding in action",
+        "description": "Watch the complete RFID tag printing and encoding process, showcasing the industrial equipment and automated workflow that ensures high-quality tag production."
+      },
+      "demo": {
+        "title": "Live Demo",
+        "subtitle": "See the platform in action",
+        "description": "Watch how the RFID traceability platform operates in real-time, showcasing its modern design, performance, and user experience."
+      }
     },
     "caixaAutoatendimento": {
       "title": "Self-Checkout with RFID – Innovation in Retail",

@@ -83,6 +83,20 @@
   },
   "projects": {
     "title": "Projetos em Destaque",
+    "navigation": {
+      "title": "Navegador de Projetos",
+      "subtitle": "Explore meus projetos em destaque",
+      "selectProject": "Selecione um projeto para ver detalhes",
+      "currentProject": "Visualizando atualmente",
+      "viewDetails": "Explorar Projeto",
+      "closePreview": "Fechar Preview",
+      "nextProject": "Próximo Projeto",
+      "previousProject": "Projeto Anterior",
+      "projectOverview": "Visão Geral do Projeto",
+      "technologies": "Tecnologias",
+      "results": "Principais Resultados",
+      "autoLoad": "Carregamento automático"
+    },
     "gbRastreio": {
       "title": "GB Rastreio – Plataforma de Rastreabilidade RFID",
       "subtitle": "Grupo Boticário • Jan 2024 - Presente • Líder Backend/Cloud",
@@ -181,7 +195,22 @@
           }
         }
       },
-      "viewPlatform": "Ver Plataforma ao Vivo"
+      "viewPlatform": "Ver Plataforma ao Vivo",
+      "screenshot": {
+        "title": "Interface da Plataforma",
+        "subtitle": "Experiência moderna e intuitiva",
+        "description": "Interface limpa e funcional projetada para gerenciamento de tags RFID, fornecendo monitoramento em tempo real e controles abrangentes de rastreabilidade."
+      },
+      "printing": {
+        "title": "Processo de Impressão de Tags RFID",
+        "subtitle": "Impressão e codificação industrial em ação",
+        "description": "Assista ao processo completo de impressão e codificação de tags RFID, mostrando o equipamento industrial e o fluxo de trabalho automatizado que garante a produção de tags de alta qualidade."
+      },
+      "demo": {
+        "title": "Demo ao Vivo",
+        "subtitle": "Veja a plataforma em ação",
+        "description": "Assista como a plataforma de rastreabilidade RFID opera em tempo real, mostrando seu design moderno, performance e experiência do usuário."
+      }
     },
     "caixaAutoatendimento": {
       "title": "Caixa de Autoatendimento com RFID – Inovação no Varejo",
