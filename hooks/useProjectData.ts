@@ -229,40 +229,15 @@ export const useProjectData = (projectId: string): ProjectData => {
           },
         ],
         architecture: {
-          title: t("projects.vendaUnificada.architecture.title"),
-          mobile: Array.isArray(
-            t("projects.vendaUnificada.architecture.mobile"),
-          )
-            ? (t(
-                "projects.vendaUnificada.architecture.mobile",
-              ) as unknown as string[])
-            : [],
-          backend: Array.isArray(
-            t("projects.vendaUnificada.architecture.backend"),
-          )
-            ? (t(
-                "projects.vendaUnificada.architecture.backend",
-              ) as unknown as string[])
-            : [],
-          auth: Array.isArray(t("projects.vendaUnificada.architecture.auth"))
-            ? (t(
-                "projects.vendaUnificada.architecture.auth",
-              ) as unknown as string[])
-            : [],
-          payment: Array.isArray(
-            t("projects.vendaUnificada.architecture.payment"),
-          )
-            ? (t(
-                "projects.vendaUnificada.architecture.payment",
-              ) as unknown as string[])
-            : [],
-          hardware: Array.isArray(
-            t("projects.vendaUnificada.architecture.hardware"),
-          )
-            ? (t(
-                "projects.vendaUnificada.architecture.hardware",
-              ) as unknown as string[])
-            : [],
+          title: t("projects.vendaUnificada.technologies.title"),
+          mobile: ["React Native", "GraphQL", "Keycloak", "Mobile UI/UX"],
+          backend: ["Node.js", "Arquitetura BFF", "GraphQL", "REST APIs"],
+          hardware: [
+            "Bluebird RFR900",
+            "Tags RFID",
+            "Dispositivos Pinpad",
+            "Sled Mobile",
+          ],
         },
         features: Array.isArray(t("projects.vendaUnificada.features"))
           ? (t("projects.vendaUnificada.features") as unknown as string[])
@@ -366,35 +341,25 @@ export const useProjectData = (projectId: string): ProjectData => {
           },
         ],
         architecture: {
-          title: t("projects.caixaAutoatendimento.architecture.title"),
-          frontend: Array.isArray(
-            t("projects.caixaAutoatendimento.architecture.frontend"),
-          )
-            ? (t(
-                "projects.caixaAutoatendimento.architecture.frontend",
-              ) as unknown as string[])
-            : [],
-          backend: Array.isArray(
-            t("projects.caixaAutoatendimento.architecture.backend"),
-          )
-            ? (t(
-                "projects.caixaAutoatendimento.architecture.backend",
-              ) as unknown as string[])
-            : [],
-          hardware: Array.isArray(
-            t("projects.caixaAutoatendimento.architecture.hardware"),
-          )
-            ? (t(
-                "projects.caixaAutoatendimento.architecture.hardware",
-              ) as unknown as string[])
-            : [],
-          integration: Array.isArray(
-            t("projects.caixaAutoatendimento.architecture.integration"),
-          )
-            ? (t(
-                "projects.caixaAutoatendimento.architecture.integration",
-              ) as unknown as string[])
-            : [],
+          title: t("projects.caixaAutoatendimento.technologies.title"),
+          frontend: [
+            "Interface Touchscreen",
+            "React",
+            "UI de Pagamento",
+            "Experiência do Cliente",
+          ],
+          backend: [
+            "Node.js",
+            "APIs de Pagamento",
+            "Middleware RFID",
+            "Gestão de Estoque",
+          ],
+          hardware: [
+            "Leitores RFID",
+            "Terminais de Pagamento",
+            "Quiosques de Autoatendimento",
+            "Sistemas de Alarme",
+          ],
         },
         features: Array.isArray(t("projects.caixaAutoatendimento.features"))
           ? (t("projects.caixaAutoatendimento.features") as unknown as string[])

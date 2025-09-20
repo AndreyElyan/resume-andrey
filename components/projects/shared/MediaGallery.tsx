@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "next-i18next";
+import Image from "next/image";
 
 interface MediaItem {
   src: string;
@@ -83,9 +84,11 @@ const MediaGallery: React.FC<MediaGalleryProps> = ({ media, isMobile }) => {
             <track kind="captions" />
           </video>
         ) : (
-          <img
+          <Image
             src={item.src}
             alt={item.alt}
+            width={300}
+            height={200}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
             onError={(e) => {
               console.error("Image failed to load:", item.src);
@@ -186,9 +189,11 @@ const MediaGallery: React.FC<MediaGalleryProps> = ({ media, isMobile }) => {
                   <track kind="captions" />
                 </video>
               ) : (
-                <img
+                <Image
                   src={selectedMedia.src}
                   alt={selectedMedia.alt}
+                  width={800}
+                  height={600}
                   className="w-full h-auto max-h-[80vh] object-contain"
                 />
               )}

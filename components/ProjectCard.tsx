@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "next-i18next";
+import Image from "next/image";
 
 interface ProjectCardProps {
   project: {
@@ -50,9 +51,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
       {/* Project Image */}
       <div className="relative h-48 sm:h-56 overflow-hidden">
-        <img
+        <Image
           src={project.image}
           alt={project.title}
+          width={400}
+          height={224}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
         />
 

@@ -124,15 +124,33 @@ const ArchitectureSection: React.FC<ArchitectureSectionProps> = ({
           </h2>
         </div>
         <div className={gridClasses}>
-          {renderTechSection("Backend", architecture.backend, "blue")}
-          {renderTechSection("AWS", architecture.aws, "orange")}
-          {renderTechSection("Frontend", architecture.frontend, "green")}
-          {renderTechSection("Platform", architecture.platform, "purple")}
-          {renderTechSection("Mobile", architecture.mobile, "blue")}
-          {renderTechSection("Auth", architecture.auth, "green")}
-          {renderTechSection("Payment", architecture.payment, "purple")}
-          {renderTechSection("Hardware", architecture.hardware, "orange")}
-          {renderTechSection("Integration", architecture.integration, "blue")}
+          {architecture.backend &&
+            architecture.backend.length > 0 &&
+            renderTechSection("Backend", architecture.backend, "blue")}
+          {architecture.aws &&
+            architecture.aws.length > 0 &&
+            renderTechSection("AWS", architecture.aws, "orange")}
+          {architecture.frontend &&
+            architecture.frontend.length > 0 &&
+            renderTechSection("Frontend", architecture.frontend, "green")}
+          {architecture.platform &&
+            architecture.platform.length > 0 &&
+            renderTechSection("Platform", architecture.platform, "purple")}
+          {architecture.mobile &&
+            architecture.mobile.length > 0 &&
+            renderTechSection("Mobile", architecture.mobile, "blue")}
+          {architecture.auth &&
+            architecture.auth.length > 0 &&
+            renderTechSection("Auth", architecture.auth, "green")}
+          {architecture.payment &&
+            architecture.payment.length > 0 &&
+            renderTechSection("Payment", architecture.payment, "purple")}
+          {architecture.hardware &&
+            architecture.hardware.length > 0 &&
+            renderTechSection("Hardware", architecture.hardware, "orange")}
+          {architecture.integration &&
+            architecture.integration.length > 0 &&
+            renderTechSection("Integration", architecture.integration, "blue")}
         </div>
       </div>
     </motion.div>

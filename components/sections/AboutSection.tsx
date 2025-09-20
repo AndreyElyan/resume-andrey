@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "next-i18next";
+import Image from "next/image";
 
 const AboutSection = () => {
   const { t } = useTranslation("common");
@@ -36,9 +37,11 @@ const AboutSection = () => {
                 className="relative"
               >
                 <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-primary-200 dark:border-primary-800 shadow-2xl">
-                  <img
+                  <Image
                     src="/images/profile-picture.jpeg"
                     alt="Andrey Elyan"
+                    width={192}
+                    height={192}
                     className="w-full h-full object-cover"
                   />
                 </div>

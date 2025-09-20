@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "next-i18next";
 import { Trophy } from "lucide-react";
+import Image from "next/image";
 
 const CertificationsSection = () => {
   const { t } = useTranslation("common");
@@ -89,12 +90,14 @@ const CertificationsSection = () => {
                   <div className="flex items-start justify-between mb-6">
                     <div className="flex items-center space-x-3">
                       <div className="w-12 h-12">
-                        <img
+                        <Image
                           src={
                             cert.type === "AWS"
                               ? "/images/aws_logo.jpeg"
                               : "/images/fiap-logo.png"
                           }
+                          width={48}
+                          height={48}
                           alt={`${cert.type} Logo`}
                           className="w-full h-full object-contain rounded-lg"
                         />
@@ -181,9 +184,11 @@ const CertificationsSection = () => {
           <div className="text-center">
             <div className="bg-white dark:bg-dark-700 rounded-2xl p-6 shadow-lg">
               <div className="w-12 h-12 mx-auto mb-4">
-                <img
+                <Image
                   src="/images/aws_logo.jpeg"
                   alt="AWS Logo"
+                  width={48}
+                  height={48}
                   className="w-full h-full object-contain rounded"
                 />
               </div>
@@ -198,9 +203,11 @@ const CertificationsSection = () => {
           <div className="text-center">
             <div className="bg-white dark:bg-dark-700 rounded-2xl p-6 shadow-lg">
               <div className="w-12 h-12 mx-auto mb-4">
-                <img
+                <Image
                   src="/images/fiap-logo.png"
                   alt="FIAP Logo"
+                  width={48}
+                  height={48}
                   className="w-full h-full object-contain rounded"
                 />
               </div>
