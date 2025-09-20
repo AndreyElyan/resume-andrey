@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "next-i18next";
 import { Trophy } from "lucide-react";
-import Image from "next/image";
 
 const CertificationsSection = () => {
   const { t } = useTranslation("common");
@@ -89,16 +88,15 @@ const CertificationsSection = () => {
                   {/* Header with logo and badge */}
                   <div className="flex items-start justify-between mb-6">
                     <div className="flex items-center space-x-3">
-                      <div className="relative w-12 h-12">
-                        <Image
+                      <div className="w-12 h-12">
+                        <img
                           src={
                             cert.type === "AWS"
                               ? "/images/aws_logo.jpeg"
                               : "/images/fiap-logo.png"
                           }
                           alt={`${cert.type} Logo`}
-                          fill
-                          className="object-contain rounded-lg"
+                          className="w-full h-full object-contain rounded-lg"
                         />
                       </div>
                       <div
@@ -182,12 +180,11 @@ const CertificationsSection = () => {
           </div>
           <div className="text-center">
             <div className="bg-white dark:bg-dark-700 rounded-2xl p-6 shadow-lg">
-              <div className="relative w-12 h-12 mx-auto mb-4">
-                <Image
+              <div className="w-12 h-12 mx-auto mb-4">
+                <img
                   src="/images/aws_logo.jpeg"
                   alt="AWS Logo"
-                  fill
-                  className="object-contain rounded"
+                  className="w-full h-full object-contain rounded"
                 />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
@@ -200,12 +197,11 @@ const CertificationsSection = () => {
           </div>
           <div className="text-center">
             <div className="bg-white dark:bg-dark-700 rounded-2xl p-6 shadow-lg">
-              <div className="relative w-12 h-12 mx-auto mb-4">
-                <Image
+              <div className="w-12 h-12 mx-auto mb-4">
+                <img
                   src="/images/fiap-logo.png"
                   alt="FIAP Logo"
-                  fill
-                  className="object-contain rounded"
+                  className="w-full h-full object-contain rounded"
                 />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
