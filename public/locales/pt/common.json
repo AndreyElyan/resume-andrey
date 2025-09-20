@@ -90,7 +90,7 @@
       "challenge": {
         "title": "Desafio & Contexto",
         "problem": "O Grupo Boticário enfrentava falta de visibilidade de estoque, perdas de produtos e falhas frequentes de inventário devido a sistemas limitados de códigos de barras/etiquetas em",
-        "scale": "15+ centros de distribuição, 3 fábricas e 4.000+ lojas",
+        "scale": "3+ centros de distribuição, 3 fábricas e 4.000+ lojas",
         "technical": "Problemas de performance de consultas e custos usando arquitetura centrada em DynamoDB para cargas de trabalho analíticas."
       },
       "contribution": {
@@ -126,35 +126,27 @@
         "title": "Resultados & Impacto no Negócio",
         "scale": {
           "title": "Escala & Performance",
-          "items": [
-            "~15 milhões de tags RFID processadas mensalmente",
-            "Horas → Minutos: Relatórios analíticos prontos em minutos vs horas",
-            "99,9% de uptime do sistema com arquitetura serverless"
-          ]
+          "item1": "~15 milhões de tags RFID processadas mensalmente",
+          "item2": "Horas → Minutos: Relatórios analíticos prontos em minutos vs horas",
+          "item3": "99,9% de uptime do sistema com arquitetura serverless"
         },
         "cost": {
           "title": "Otimização de Custos",
-          "items": [
-            "~91% de redução nos custos de armazenamento (DynamoDB → S3)",
-            "~92% mais barato nos custos de consulta com compressão Parquet",
-            "~40-60% de economia geral nos custos operacionais"
-          ]
+          "item1": "Armazenamento: migrou analytics históricos do DynamoDB para S3 Standard, reduzindo armazenamento de ~US$ 500 → ~US$ 46/mês para 2 TB (~91% menor) ou ~US$ 200 → ~US$ 46 (~77%) vs Standard-IA",
+          "item2": "Custo de consulta: com Athena a ~US$ 5/TB escaneado e compressão colunar Parquet, reduzimos bytes escaneados por relatório em ~12×, diminuindo custo de ~US$ 10 → ~US$ 0,83 por consulta em dataset de 2 TB (~92% mais barato), economizando ~US$ 1.000 → ~US$ 83/mês para ~100 consultas",
+          "item3": "Resultado: separou OLTP de analytics, melhorou previsibilidade de performance e alcançou reduções de custo de dois dígitos enquanto habilitava relatórios históricos mais ricos"
         },
         "business": {
           "title": "Impacto no Negócio",
-          "items": [
-            "Redução significativa nos erros de inventário",
-            "Melhoria na prevenção de rupturas de estoque nas lojas",
-            "Rastreabilidade aprimorada em toda a cadeia de suprimentos"
-          ]
+          "item1": "Redução significativa nos erros de inventário",
+          "item2": "Melhoria na prevenção de rupturas de estoque nas lojas",
+          "item3": "Rastreabilidade aprimorada em toda a cadeia de suprimentos"
         },
         "security": {
           "title": "Segurança & Confiabilidade",
-          "items": [
-            "RBAC granular com políticas JSONB",
-            "Monitoramento e alertas em tempo real",
-            "Design de microserviços tolerante a falhas"
-          ]
+          "item1": "RBAC granular com políticas JSONB",
+          "item2": "Monitoramento e alertas em tempo real",
+          "item3": "Design de microserviços tolerante a falhas"
         }
       },
       "highlights": {

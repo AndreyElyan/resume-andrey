@@ -90,7 +90,7 @@
       "challenge": {
         "title": "Challenge & Context",
         "problem": "Grupo Boticário faced lack of inventory visibility, product losses, and frequent inventory failures due to limited barcode/etiquette systems across",
-        "scale": "15+ distribution centers, 3 factories, and 4,000+ stores",
+        "scale": "3+ distribution centers, 3 factories, and 4,000+ stores",
         "technical": "High query performance and cost problems using DynamoDB-centric architecture for analytics workloads."
       },
       "contribution": {
@@ -126,35 +126,27 @@
         "title": "Results & Business Impact",
         "scale": {
           "title": "Scale & Performance",
-          "items": [
-            "~15 million RFID tags processed monthly",
-            "Hours → Minutes: Analytics reports now ready in minutes vs hours",
-            "99.9% system uptime with serverless architecture"
-          ]
+          "item1": "~15 million RFID tags processed monthly",
+          "item2": "Hours → Minutes: Analytics reports now ready in minutes vs hours",
+          "item3": "99.9% system uptime with serverless architecture"
         },
         "cost": {
           "title": "Cost Optimization",
-          "items": [
-            "~91% reduction in storage costs (DynamoDB → S3)",
-            "~92% cheaper query costs with Parquet compression",
-            "~40-60% overall operational cost savings"
-          ]
+          "item1": "Storage: moved historical analytics from DynamoDB to S3 Standard, cutting storage from ~US$ 500 → ~US$ 46/month for 2 TB (~91% lower) or ~US$ 200 → ~US$ 46 (~77%) vs Standard-IA",
+          "item2": "Query cost: with Athena at ~US$ 5/TB scanned and Parquet columnar compression, we reduced bytes scanned per report by ~12×, dropping cost from ~US$ 10 → ~US$ 0.83 per query on a 2 TB dataset (~92% cheaper), saving ~US$ 1,000 → ~US$ 83/month for ~100 queries",
+          "item3": "Outcome: separated OLTP from analytics, improved performance predictability, and achieved double-digit cost reductions while enabling richer historical reporting"
         },
         "business": {
           "title": "Business Impact",
-          "items": [
-            "Significant reduction in inventory errors",
-            "Improved stockout prevention in stores",
-            "Enhanced traceability across supply chain"
-          ]
+          "item1": "Significant reduction in inventory errors",
+          "item2": "Improved stockout prevention in stores",
+          "item3": "Enhanced traceability across supply chain"
         },
         "security": {
           "title": "Security & Reliability",
-          "items": [
-            "Granular RBAC with JSONB policies",
-            "Real-time monitoring and alerting",
-            "Fault-tolerant microservices design"
-          ]
+          "item1": "Granular RBAC with JSONB policies",
+          "item2": "Real-time monitoring and alerting",
+          "item3": "Fault-tolerant microservices design"
         }
       },
       "highlights": {

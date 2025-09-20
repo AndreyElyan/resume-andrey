@@ -179,6 +179,9 @@ const ProjectsSection = () => {
                         API Gateway
                       </span>
                       <span className="inline-block px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-sm rounded-full mr-2 mb-2">
+                        DocumentDB
+                      </span>
+                      <span className="inline-block px-3 py-1 dark:bg-green-900 text-green-800 dark:text-green-200 text-sm rounded-full mr-2 mb-2">
                         S3 + Athena
                       </span>
                       <span className="inline-block px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-sm rounded-full mr-2 mb-2">
@@ -224,16 +227,13 @@ const ProjectsSection = () => {
                       </h5>
                       <ul className="text-green-700 dark:text-green-300 space-y-1">
                         <li>
-                          • <strong>~15 million</strong> RFID tags processed
-                          monthly
+                          • {t("projects.gbRastreio.results.scale.item1")}
                         </li>
                         <li>
-                          • <strong>Hours → Minutes:</strong> Analytics reports
-                          now ready in minutes vs hours
+                          • {t("projects.gbRastreio.results.scale.item2")}
                         </li>
                         <li>
-                          • <strong>99.9%</strong> system uptime with serverless
-                          architecture
+                          • {t("projects.gbRastreio.results.scale.item3")}
                         </li>
                       </ul>
                     </div>
@@ -243,18 +243,9 @@ const ProjectsSection = () => {
                         💰 {t("projects.gbRastreio.results.cost.title")}
                       </h5>
                       <ul className="text-blue-700 dark:text-blue-300 space-y-1">
-                        <li>
-                          • <strong>~91% reduction</strong> in storage costs
-                          (DynamoDB → S3)
-                        </li>
-                        <li>
-                          • <strong>~92% cheaper</strong> query costs with
-                          Parquet compression
-                        </li>
-                        <li>
-                          • <strong>~40-60% overall</strong> operational cost
-                          savings
-                        </li>
+                        <li>• {t("projects.gbRastreio.results.cost.item1")}</li>
+                        <li>• {t("projects.gbRastreio.results.cost.item2")}</li>
+                        <li>• {t("projects.gbRastreio.results.cost.item3")}</li>
                       </ul>
                     </div>
                   </div>
@@ -266,16 +257,13 @@ const ProjectsSection = () => {
                       </h5>
                       <ul className="text-purple-700 dark:text-purple-300 space-y-1">
                         <li>
-                          • <strong>Significant reduction</strong> in inventory
-                          errors
+                          • {t("projects.gbRastreio.results.business.item1")}
                         </li>
                         <li>
-                          • <strong>Improved stockout</strong> prevention in
-                          stores
+                          • {t("projects.gbRastreio.results.business.item2")}
                         </li>
                         <li>
-                          • <strong>Enhanced traceability</strong> across supply
-                          chain
+                          • {t("projects.gbRastreio.results.business.item3")}
                         </li>
                       </ul>
                     </div>
@@ -286,13 +274,13 @@ const ProjectsSection = () => {
                       </h5>
                       <ul className="text-orange-700 dark:text-orange-300 space-y-1">
                         <li>
-                          • <strong>Granular RBAC</strong> with JSONB policies
+                          • {t("projects.gbRastreio.results.security.item1")}
                         </li>
                         <li>
-                          • <strong>Real-time monitoring</strong> and alerting
+                          • {t("projects.gbRastreio.results.security.item2")}
                         </li>
                         <li>
-                          • <strong>Fault-tolerant</strong> microservices design
+                          • {t("projects.gbRastreio.results.security.item3")}
                         </li>
                       </ul>
                     </div>
