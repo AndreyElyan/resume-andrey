@@ -24,8 +24,9 @@ const ProjectsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="max-w-7xl mx-auto"
+          className="max-w-7xl mx-auto space-y-12"
         >
+          {/* GB Rastreio Project */}
           <div className="bg-white dark:bg-dark-800 rounded-3xl shadow-2xl overflow-hidden border border-gray-200 dark:border-dark-700">
             {/* Hero Banner */}
             <div className="relative h-80 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 overflow-hidden">
@@ -429,6 +430,1056 @@ const ProjectsSection = () => {
                     <span className="mr-2">🌐</span>
                     {t("projects.gbRastreio.viewPlatform")}
                   </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Venda Unificada Project */}
+          <div className="bg-white dark:bg-dark-800 rounded-3xl shadow-2xl overflow-hidden border border-gray-200 dark:border-dark-700">
+            {/* Hero Banner */}
+            <div className="relative h-80 bg-gradient-to-br from-pink-600 via-red-600 to-orange-600 overflow-hidden">
+              <div className="absolute inset-0 bg-black/20"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-pink-600/50 to-transparent"></div>
+
+              <div className="relative z-10 p-8 h-full flex items-center justify-between">
+                <div className="text-white max-w-3xl">
+                  <div className="flex items-center mb-6">
+                    <div className="h-16 w-16 bg-white/20 rounded-xl flex items-center justify-center mr-6 backdrop-blur-sm">
+                      <span className="text-3xl">🛍️</span>
+                    </div>
+                    <div>
+                      <h3 className="text-4xl font-bold mb-2">
+                        {t("projects.vendaUnificada.title")}
+                      </h3>
+                      <p className="text-pink-200 text-lg">
+                        {t("projects.vendaUnificada.subtitle")}
+                      </p>
+                    </div>
+                  </div>
+                  <p className="text-xl text-pink-100 leading-relaxed">
+                    {t("projects.vendaUnificada.description")}
+                  </p>
+                </div>
+
+                <div className="hidden lg:flex space-x-4">
+                  <div className="w-20 h-20 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm border border-white/30">
+                    <span className="text-3xl">📱</span>
+                  </div>
+                  <div className="w-20 h-20 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm border border-white/30">
+                    <span className="text-3xl">🏪</span>
+                  </div>
+                  <div className="w-20 h-20 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm border border-white/30">
+                    <span className="text-3xl">💳</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="p-8">
+              {/* Context & Problem */}
+              <div className="mb-12">
+                <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                  <span className="text-3xl mr-4">🎯</span>
+                  {t("projects.vendaUnificada.challenge.title")}
+                </h4>
+                <div className="bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 p-6 rounded-r-lg">
+                  <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                    <strong>Lojas Renner</strong>{" "}
+                    {t("projects.vendaUnificada.challenge.problem")}
+                    <strong>
+                      {" "}
+                      {t("projects.vendaUnificada.challenge.scale")}
+                    </strong>
+                    .
+                  </p>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    {t("projects.vendaUnificada.challenge.technical")}
+                  </p>
+                </div>
+              </div>
+
+              {/* My Contribution */}
+              <div className="mb-12">
+                <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                  <span className="text-3xl mr-4">🚀</span>
+                  {t("projects.vendaUnificada.contribution.title")}
+                </h4>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  <div className="space-y-4">
+                    <div className="flex items-start">
+                      <span className="w-2 h-2 bg-pink-500 rounded-full mr-3 mt-2"></span>
+                      <span className="text-gray-700 dark:text-gray-300">
+                        {t("projects.vendaUnificada.contribution.architecture")}
+                      </span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="w-2 h-2 bg-red-500 rounded-full mr-3 mt-2"></span>
+                      <span className="text-gray-700 dark:text-gray-300">
+                        {t(
+                          "projects.vendaUnificada.contribution.authentication",
+                        )}
+                      </span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="w-2 h-2 bg-orange-500 rounded-full mr-3 mt-2"></span>
+                      <span className="text-gray-700 dark:text-gray-300">
+                        {t("projects.vendaUnificada.contribution.api")}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="flex items-start">
+                      <span className="w-2 h-2 bg-purple-500 rounded-full mr-3 mt-2"></span>
+                      <span className="text-gray-700 dark:text-gray-300">
+                        {t("projects.vendaUnificada.contribution.rfid")}
+                      </span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="w-2 h-2 bg-green-500 rounded-full mr-3 mt-2"></span>
+                      <span className="text-gray-700 dark:text-gray-300">
+                        {t("projects.vendaUnificada.contribution.payment")}
+                      </span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2"></span>
+                      <span className="text-gray-700 dark:text-gray-300">
+                        {t("projects.vendaUnificada.contribution.mobile")}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Technologies */}
+              <div className="mb-12">
+                <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                  <span className="text-3xl mr-4">🛠️</span>
+                  {t("projects.vendaUnificada.technologies.title")}
+                </h4>
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                  <div className="bg-gray-50 dark:bg-dark-700 rounded-xl p-6">
+                    <h5 className="font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                      <span className="text-xl mr-2">📱</span>
+                      {t("projects.vendaUnificada.technologies.mobile.title")}
+                    </h5>
+                    <div className="space-y-2">
+                      <span className="inline-block px-3 py-1 bg-pink-100 dark:bg-pink-900 text-pink-800 dark:text-pink-200 text-sm rounded-full mr-2 mb-2">
+                        React Native
+                      </span>
+                      <span className="inline-block px-3 py-1 bg-pink-100 dark:bg-pink-900 text-pink-800 dark:text-pink-200 text-sm rounded-full mr-2 mb-2">
+                        GraphQL
+                      </span>
+                      <span className="inline-block px-3 py-1 bg-pink-100 dark:bg-pink-900 text-pink-800 dark:text-pink-200 text-sm rounded-full mr-2 mb-2">
+                        Keycloak
+                      </span>
+                      <span className="inline-block px-3 py-1 bg-pink-100 dark:bg-pink-900 text-pink-800 dark:text-pink-200 text-sm rounded-full mr-2 mb-2">
+                        Mobile UI/UX
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="bg-gray-50 dark:bg-dark-700 rounded-xl p-6">
+                    <h5 className="font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                      <span className="text-xl mr-2">⚡</span>
+                      {t("projects.vendaUnificada.technologies.backend.title")}
+                    </h5>
+                    <div className="space-y-2">
+                      <span className="inline-block px-3 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 text-sm rounded-full mr-2 mb-2">
+                        Node.js
+                      </span>
+                      <span className="inline-block px-3 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 text-sm rounded-full mr-2 mb-2">
+                        BFF Architecture
+                      </span>
+                      <span className="inline-block px-3 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 text-sm rounded-full mr-2 mb-2">
+                        GraphQL
+                      </span>
+                      <span className="inline-block px-3 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 text-sm rounded-full mr-2 mb-2">
+                        REST APIs
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="bg-gray-50 dark:bg-dark-700 rounded-xl p-6">
+                    <h5 className="font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                      <span className="text-xl mr-2">🔧</span>
+                      {t("projects.vendaUnificada.technologies.hardware.title")}
+                    </h5>
+                    <div className="space-y-2">
+                      <span className="inline-block px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 text-sm rounded-full mr-2 mb-2">
+                        Bluebird RFR900
+                      </span>
+                      <span className="inline-block px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 text-sm rounded-full mr-2 mb-2">
+                        RFID Tags
+                      </span>
+                      <span className="inline-block px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 text-sm rounded-full mr-2 mb-2">
+                        Pinpad Devices
+                      </span>
+                      <span className="inline-block px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 text-sm rounded-full mr-2 mb-2">
+                        Mobile Sled
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Results & Metrics */}
+              <div className="mb-12">
+                <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                  <span className="text-3xl mr-4">📊</span>
+                  {t("projects.vendaUnificada.results.title")}
+                </h4>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  <div className="space-y-6">
+                    <div className="bg-pink-50 dark:bg-pink-900/20 border-l-4 border-pink-500 p-6 rounded-r-lg">
+                      <h5 className="font-bold text-pink-800 dark:text-pink-200 mb-2">
+                        🏪{" "}
+                        {t("projects.vendaUnificada.results.efficiency.title")}
+                      </h5>
+                      <ul className="text-pink-700 dark:text-pink-300 space-y-1">
+                        <li>
+                          •{" "}
+                          {t(
+                            "projects.vendaUnificada.results.efficiency.item1",
+                          )}
+                        </li>
+                        <li>
+                          •{" "}
+                          {t(
+                            "projects.vendaUnificada.results.efficiency.item2",
+                          )}
+                        </li>
+                        <li>
+                          •{" "}
+                          {t(
+                            "projects.vendaUnificada.results.efficiency.item3",
+                          )}
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div className="bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 p-6 rounded-r-lg">
+                      <h5 className="font-bold text-red-800 dark:text-red-200 mb-2">
+                        ⚡{" "}
+                        {t("projects.vendaUnificada.results.technology.title")}
+                      </h5>
+                      <ul className="text-red-700 dark:text-red-300 space-y-1">
+                        <li>
+                          •{" "}
+                          {t(
+                            "projects.vendaUnificada.results.technology.item1",
+                          )}
+                        </li>
+                        <li>
+                          •{" "}
+                          {t(
+                            "projects.vendaUnificada.results.technology.item2",
+                          )}
+                        </li>
+                        <li>
+                          •{" "}
+                          {t(
+                            "projects.vendaUnificada.results.technology.item3",
+                          )}
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="space-y-6">
+                    <div className="bg-orange-50 dark:bg-orange-900/20 border-l-4 border-orange-500 p-6 rounded-r-lg">
+                      <h5 className="font-bold text-orange-800 dark:text-orange-200 mb-2">
+                        🎯 {t("projects.vendaUnificada.results.business.title")}
+                      </h5>
+                      <ul className="text-orange-700 dark:text-orange-300 space-y-1">
+                        <li>
+                          •{" "}
+                          {t("projects.vendaUnificada.results.business.item1")}
+                        </li>
+                        <li>
+                          •{" "}
+                          {t("projects.vendaUnificada.results.business.item2")}
+                        </li>
+                        <li>
+                          •{" "}
+                          {t("projects.vendaUnificada.results.business.item3")}
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div className="bg-purple-50 dark:bg-purple-900/20 border-l-4 border-purple-500 p-6 rounded-r-lg">
+                      <h5 className="font-bold text-purple-800 dark:text-purple-200 mb-2">
+                        🚀{" "}
+                        {t("projects.vendaUnificada.results.innovation.title")}
+                      </h5>
+                      <ul className="text-purple-700 dark:text-purple-300 space-y-1">
+                        <li>
+                          •{" "}
+                          {t(
+                            "projects.vendaUnificada.results.innovation.item1",
+                          )}
+                        </li>
+                        <li>
+                          •{" "}
+                          {t(
+                            "projects.vendaUnificada.results.innovation.item2",
+                          )}
+                        </li>
+                        <li>
+                          •{" "}
+                          {t(
+                            "projects.vendaUnificada.results.innovation.item3",
+                          )}
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Technical Highlights */}
+              <div className="mb-12">
+                <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                  <span className="text-3xl mr-4">⭐</span>
+                  {t("projects.vendaUnificada.highlights.title")}
+                </h4>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  <div className="bg-gradient-to-br from-pink-50 to-red-50 dark:from-pink-900/20 dark:to-red-900/20 rounded-xl p-6">
+                    <h5 className="font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                      <span className="text-xl mr-2">🛍️</span>
+                      {t(
+                        "projects.vendaUnificada.highlights.omnichannel.title",
+                      )}
+                    </h5>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                      {t(
+                        "projects.vendaUnificada.highlights.omnichannel.description",
+                      )}
+                    </p>
+                  </div>
+
+                  <div className="bg-gradient-to-br from-orange-50 to-purple-50 dark:from-orange-900/20 dark:to-purple-900/20 rounded-xl p-6">
+                    <h5 className="font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                      <span className="text-xl mr-2">📡</span>
+                      {t("projects.vendaUnificada.highlights.rfid.title")}
+                    </h5>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                      {t("projects.vendaUnificada.highlights.rfid.description")}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* RFID Technology Showcase */}
+              <div className="mb-12">
+                <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                  <span className="text-3xl mr-4">🏷️</span>
+                  {t("projects.vendaUnificada.rfidShowcase.title")}
+                </h4>
+                <div className="bg-gradient-to-br from-orange-50 to-pink-50 dark:from-orange-900/20 dark:to-pink-900/20 rounded-2xl p-8 border border-orange-200 dark:border-orange-800">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div className="order-2 lg:order-1">
+                      <h5 className="text-xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                        <span className="text-2xl mr-3">📡</span>
+                        {t("projects.vendaUnificada.rfidShowcase.subtitle")}
+                      </h5>
+                      <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                        {t("projects.vendaUnificada.rfidShowcase.description")}
+                      </p>
+                      <div className="space-y-3">
+                        <div className="flex items-center">
+                          <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
+                          <span className="text-sm text-gray-600 dark:text-gray-300">
+                            <strong>
+                              {t(
+                                "projects.vendaUnificada.rfidShowcase.details.productCode",
+                              )}
+                            </strong>{" "}
+                            546099971
+                          </span>
+                        </div>
+                        <div className="flex items-center">
+                          <span className="w-2 h-2 bg-pink-500 rounded-full mr-3"></span>
+                          <span className="text-sm text-gray-600 dark:text-gray-300">
+                            <strong>
+                              {t(
+                                "projects.vendaUnificada.rfidShowcase.details.epcCode",
+                              )}
+                            </strong>{" "}
+                            3BE10000208CD30300002723
+                          </span>
+                        </div>
+                        <div className="flex items-center">
+                          <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                          <span className="text-sm text-gray-600 dark:text-gray-300">
+                            <strong>
+                              {t(
+                                "projects.vendaUnificada.rfidShowcase.details.size",
+                              )}
+                            </strong>{" "}
+                            M (Medium)
+                          </span>
+                        </div>
+                        <div className="flex items-center">
+                          <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                          <span className="text-sm text-gray-600 dark:text-gray-300">
+                            <strong>
+                              {t(
+                                "projects.vendaUnificada.rfidShowcase.details.qrCode",
+                              )}
+                            </strong>{" "}
+                            {t(
+                              "projects.vendaUnificada.rfidShowcase.details.qrDescription",
+                            )}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="order-1 lg:order-2">
+                      <div className="bg-white dark:bg-dark-800 rounded-xl p-6 shadow-xl border border-gray-200 dark:border-dark-600">
+                        <img
+                          src="/images/rfid-tag-on-clothe-renner.jpg"
+                          alt="RFID Tag embedded in Lojas Renner clothing showing product details, size information, QR code, and RFID symbol for inventory tracking"
+                          className="w-full h-auto rounded-lg hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Hardware Integration */}
+              <div className="mb-12">
+                <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                  <span className="text-3xl mr-4">🔧</span>
+                  {t("projects.vendaUnificada.hardwareIntegration.title")}
+                </h4>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div className="bg-gray-50 dark:bg-dark-700 rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300 hover:scale-105">
+                    <img
+                      src="/hardware/bluebird-rfr900-devicemobile.jpeg"
+                      alt="Bluebird RFR900 Mobile RFID Reader"
+                      className="h-20 w-auto mx-auto mb-4 rounded-lg"
+                    />
+                    <h6 className="font-semibold text-gray-900 dark:text-white mb-2">
+                      {t(
+                        "projects.vendaUnificada.hardwareIntegration.devices.bluebird.name",
+                      )}
+                    </h6>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                      {t(
+                        "projects.vendaUnificada.hardwareIntegration.devices.bluebird.description",
+                      )}
+                    </p>
+                  </div>
+                  <div className="bg-gray-50 dark:bg-dark-700 rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300 hover:scale-105">
+                    <div className="h-20 w-20 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <span className="text-3xl">💳</span>
+                    </div>
+                    <h6 className="font-semibold text-gray-900 dark:text-white mb-2">
+                      {t(
+                        "projects.vendaUnificada.hardwareIntegration.devices.pinpad.name",
+                      )}
+                    </h6>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                      {t(
+                        "projects.vendaUnificada.hardwareIntegration.devices.pinpad.description",
+                      )}
+                    </p>
+                  </div>
+                  <div className="bg-gray-50 dark:bg-dark-700 rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300 hover:scale-105">
+                    <div className="h-20 w-20 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <span className="text-3xl">📱</span>
+                    </div>
+                    <h6 className="font-semibold text-gray-900 dark:text-white mb-2">
+                      {t(
+                        "projects.vendaUnificada.hardwareIntegration.devices.mobile.name",
+                      )}
+                    </h6>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                      {t(
+                        "projects.vendaUnificada.hardwareIntegration.devices.mobile.description",
+                      )}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Demo & Screenshots */}
+              <div className="mb-12">
+                <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                  <span className="text-3xl mr-4">📱</span>
+                  {t("projects.vendaUnificada.demo.title")}
+                </h4>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  <div className="bg-gradient-to-br from-pink-50 to-red-50 dark:from-pink-900/20 dark:to-red-900/20 rounded-xl p-6">
+                    <h5 className="font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                      <span className="text-xl mr-2">🛍️</span>
+                      {t("projects.vendaUnificada.demo.productInterface.title")}
+                    </h5>
+                    <div className="bg-white dark:bg-dark-800 rounded-lg p-4 shadow-lg">
+                      <img
+                        src="/prints/ui-omni-sale-demo.jpeg"
+                        alt="Omni Sale Demo Interface"
+                        className="w-full h-auto rounded-lg"
+                      />
+                    </div>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm mt-4 leading-relaxed">
+                      {t(
+                        "projects.vendaUnificada.demo.productInterface.description",
+                      )}
+                    </p>
+                  </div>
+
+                  <div className="bg-gradient-to-br from-orange-50 to-purple-50 dark:from-orange-900/20 dark:to-purple-900/20 rounded-xl p-6">
+                    <h5 className="font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                      <span className="text-xl mr-2">📱</span>
+                      {t("projects.vendaUnificada.demo.mobileApp.title")}
+                    </h5>
+                    <div className="bg-white dark:bg-dark-800 rounded-lg p-4 shadow-lg">
+                      <img
+                        src="/prints/demo-app-real-omni-sale.jpeg"
+                        alt="Real Omni Sale App Demo"
+                        className="w-full h-auto rounded-lg"
+                      />
+                    </div>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm mt-4 leading-relaxed">
+                      {t("projects.vendaUnificada.demo.mobileApp.description")}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Footer */}
+              <div className="pt-8 border-t border-gray-200 dark:border-dark-700">
+                <div className="flex justify-center">
+                  <div className="flex flex-wrap gap-3 justify-center">
+                    <span className="px-4 py-2 bg-pink-100 dark:bg-pink-900 text-pink-800 dark:text-pink-200 text-sm rounded-full font-medium">
+                      React Native
+                    </span>
+                    <span className="px-4 py-2 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 text-sm rounded-full font-medium">
+                      Node.js
+                    </span>
+                    <span className="px-4 py-2 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 text-sm rounded-full font-medium">
+                      GraphQL
+                    </span>
+                    <span className="px-4 py-2 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-sm rounded-full font-medium">
+                      Keycloak
+                    </span>
+                    <span className="px-4 py-2 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-sm rounded-full font-medium">
+                      RFID
+                    </span>
+                    <span className="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm rounded-full font-medium">
+                      Omnichannel
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Caixa de Autoatendimento Project */}
+          <div className="bg-white dark:bg-dark-800 rounded-3xl shadow-2xl overflow-hidden border border-gray-200 dark:border-dark-700">
+            {/* Hero Banner */}
+            <div className="relative h-80 bg-gradient-to-br from-green-600 via-teal-600 to-cyan-600 overflow-hidden">
+              <div className="absolute inset-0 bg-black/20"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-green-600/50 to-transparent"></div>
+
+              <div className="relative z-10 p-8 h-full flex items-center justify-between">
+                <div className="text-white max-w-3xl">
+                  <div className="flex items-center mb-6">
+                    <div className="h-16 w-16 bg-white/20 rounded-xl flex items-center justify-center mr-6 backdrop-blur-sm">
+                      <span className="text-3xl">🏪</span>
+                    </div>
+                    <div>
+                      <h3 className="text-4xl font-bold mb-2">
+                        {t("projects.caixaAutoatendimento.title")}
+                      </h3>
+                      <p className="text-green-200 text-lg">
+                        {t("projects.caixaAutoatendimento.subtitle")}
+                      </p>
+                    </div>
+                  </div>
+                  <p className="text-xl text-green-100 leading-relaxed">
+                    {t("projects.caixaAutoatendimento.description")}
+                  </p>
+                </div>
+
+                <div className="hidden lg:flex space-x-4">
+                  <div className="w-20 h-20 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm border border-white/30">
+                    <span className="text-3xl">💳</span>
+                  </div>
+                  <div className="w-20 h-20 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm border border-white/30">
+                    <span className="text-3xl">📱</span>
+                  </div>
+                  <div className="w-20 h-20 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm border border-white/30">
+                    <span className="text-3xl">🏷️</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="p-8">
+              {/* Context & Problem */}
+              <div className="mb-12">
+                <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                  <span className="text-3xl mr-4">🎯</span>
+                  {t("projects.caixaAutoatendimento.challenge.title")}
+                </h4>
+                <div className="bg-green-50 dark:bg-green-900/20 border-l-4 border-green-500 p-6 rounded-r-lg">
+                  <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                    <strong>Lojas Renner</strong>{" "}
+                    {t("projects.caixaAutoatendimento.challenge.problem")}
+                    <strong>
+                      {" "}
+                      {t("projects.caixaAutoatendimento.challenge.scale")}
+                    </strong>
+                    .
+                  </p>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    {t("projects.caixaAutoatendimento.challenge.technical")}
+                  </p>
+                </div>
+              </div>
+
+              {/* My Contribution */}
+              <div className="mb-12">
+                <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                  <span className="text-3xl mr-4">🚀</span>
+                  {t("projects.caixaAutoatendimento.contribution.title")}
+                </h4>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  <div className="space-y-4">
+                    <div className="flex items-start">
+                      <span className="w-2 h-2 bg-green-500 rounded-full mr-3 mt-2"></span>
+                      <span className="text-gray-700 dark:text-gray-300">
+                        {t(
+                          "projects.caixaAutoatendimento.contribution.architecture",
+                        )}
+                      </span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="w-2 h-2 bg-teal-500 rounded-full mr-3 mt-2"></span>
+                      <span className="text-gray-700 dark:text-gray-300">
+                        {t("projects.caixaAutoatendimento.contribution.rfid")}
+                      </span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="w-2 h-2 bg-cyan-500 rounded-full mr-3 mt-2"></span>
+                      <span className="text-gray-700 dark:text-gray-300">
+                        {t(
+                          "projects.caixaAutoatendimento.contribution.payment",
+                        )}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="flex items-start">
+                      <span className="w-2 h-2 bg-emerald-500 rounded-full mr-3 mt-2"></span>
+                      <span className="text-gray-700 dark:text-gray-300">
+                        {t("projects.caixaAutoatendimento.contribution.ui")}
+                      </span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="w-2 h-2 bg-lime-500 rounded-full mr-3 mt-2"></span>
+                      <span className="text-gray-700 dark:text-gray-300">
+                        {t(
+                          "projects.caixaAutoatendimento.contribution.security",
+                        )}
+                      </span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2"></span>
+                      <span className="text-gray-700 dark:text-gray-300">
+                        {t(
+                          "projects.caixaAutoatendimento.contribution.scalability",
+                        )}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Technologies */}
+              <div className="mb-12">
+                <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                  <span className="text-3xl mr-4">🛠️</span>
+                  {t("projects.caixaAutoatendimento.technologies.title")}
+                </h4>
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                  <div className="bg-gray-50 dark:bg-dark-700 rounded-xl p-6">
+                    <h5 className="font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                      <span className="text-xl mr-2">📱</span>
+                      {t(
+                        "projects.caixaAutoatendimento.technologies.frontend.title",
+                      )}
+                    </h5>
+                    <div className="space-y-2">
+                      <span className="inline-block px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-sm rounded-full mr-2 mb-2">
+                        Touchscreen Interface
+                      </span>
+                      <span className="inline-block px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-sm rounded-full mr-2 mb-2">
+                        React
+                      </span>
+                      <span className="inline-block px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-sm rounded-full mr-2 mb-2">
+                        Payment UI
+                      </span>
+                      <span className="inline-block px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-sm rounded-full mr-2 mb-2">
+                        Customer Experience
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="bg-gray-50 dark:bg-dark-700 rounded-xl p-6">
+                    <h5 className="font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                      <span className="text-xl mr-2">⚡</span>
+                      {t(
+                        "projects.caixaAutoatendimento.technologies.backend.title",
+                      )}
+                    </h5>
+                    <div className="space-y-2">
+                      <span className="inline-block px-3 py-1 bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200 text-sm rounded-full mr-2 mb-2">
+                        Node.js
+                      </span>
+                      <span className="inline-block px-3 py-1 bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200 text-sm rounded-full mr-2 mb-2">
+                        Payment APIs
+                      </span>
+                      <span className="inline-block px-3 py-1 bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200 text-sm rounded-full mr-2 mb-2">
+                        RFID Middleware
+                      </span>
+                      <span className="inline-block px-3 py-1 bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200 text-sm rounded-full mr-2 mb-2">
+                        Inventory Management
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="bg-gray-50 dark:bg-dark-700 rounded-xl p-6">
+                    <h5 className="font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                      <span className="text-xl mr-2">🔧</span>
+                      {t(
+                        "projects.caixaAutoatendimento.technologies.hardware.title",
+                      )}
+                    </h5>
+                    <div className="space-y-2">
+                      <span className="inline-block px-3 py-1 bg-cyan-100 dark:bg-cyan-900 text-cyan-800 dark:text-cyan-200 text-sm rounded-full mr-2 mb-2">
+                        RFID Readers
+                      </span>
+                      <span className="inline-block px-3 py-1 bg-cyan-100 dark:bg-cyan-900 text-cyan-800 dark:text-cyan-200 text-sm rounded-full mr-2 mb-2">
+                        Payment Terminals
+                      </span>
+                      <span className="inline-block px-3 py-1 bg-cyan-100 dark:bg-cyan-900 text-cyan-800 dark:text-cyan-200 text-sm rounded-full mr-2 mb-2">
+                        Self-Checkout Kiosks
+                      </span>
+                      <span className="inline-block px-3 py-1 bg-cyan-100 dark:bg-cyan-900 text-cyan-800 dark:text-cyan-200 text-sm rounded-full mr-2 mb-2">
+                        Alarm Systems
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Results & Metrics */}
+              <div className="mb-12">
+                <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                  <span className="text-3xl mr-4">📊</span>
+                  {t("projects.caixaAutoatendimento.results.title")}
+                </h4>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  <div className="space-y-6">
+                    <div className="bg-green-50 dark:bg-green-900/20 border-l-4 border-green-500 p-6 rounded-r-lg">
+                      <h5 className="font-bold text-green-800 dark:text-green-200 mb-2">
+                        🏪{" "}
+                        {t("projects.caixaAutoatendimento.results.scale.title")}
+                      </h5>
+                      <ul className="text-green-700 dark:text-green-300 space-y-1">
+                        <li>
+                          •{" "}
+                          {t(
+                            "projects.caixaAutoatendimento.results.scale.item1",
+                          )}
+                        </li>
+                        <li>
+                          •{" "}
+                          {t(
+                            "projects.caixaAutoatendimento.results.scale.item2",
+                          )}
+                        </li>
+                        <li>
+                          •{" "}
+                          {t(
+                            "projects.caixaAutoatendimento.results.scale.item3",
+                          )}
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div className="bg-teal-50 dark:bg-teal-900/20 border-l-4 border-teal-500 p-6 rounded-r-lg">
+                      <h5 className="font-bold text-teal-800 dark:text-teal-200 mb-2">
+                        ⚡{" "}
+                        {t(
+                          "projects.caixaAutoatendimento.results.efficiency.title",
+                        )}
+                      </h5>
+                      <ul className="text-teal-700 dark:text-teal-300 space-y-1">
+                        <li>
+                          •{" "}
+                          {t(
+                            "projects.caixaAutoatendimento.results.efficiency.item1",
+                          )}
+                        </li>
+                        <li>
+                          •{" "}
+                          {t(
+                            "projects.caixaAutoatendimento.results.efficiency.item2",
+                          )}
+                        </li>
+                        <li>
+                          •{" "}
+                          {t(
+                            "projects.caixaAutoatendimento.results.efficiency.item3",
+                          )}
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="space-y-6">
+                    <div className="bg-cyan-50 dark:bg-cyan-900/20 border-l-4 border-cyan-500 p-6 rounded-r-lg">
+                      <h5 className="font-bold text-cyan-800 dark:text-cyan-200 mb-2">
+                        🚀{" "}
+                        {t(
+                          "projects.caixaAutoatendimento.results.innovation.title",
+                        )}
+                      </h5>
+                      <ul className="text-cyan-700 dark:text-cyan-300 space-y-1">
+                        <li>
+                          •{" "}
+                          {t(
+                            "projects.caixaAutoatendimento.results.innovation.item1",
+                          )}
+                        </li>
+                        <li>
+                          •{" "}
+                          {t(
+                            "projects.caixaAutoatendimento.results.innovation.item2",
+                          )}
+                        </li>
+                        <li>
+                          •{" "}
+                          {t(
+                            "projects.caixaAutoatendimento.results.innovation.item3",
+                          )}
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div className="bg-emerald-50 dark:bg-emerald-900/20 border-l-4 border-emerald-500 p-6 rounded-r-lg">
+                      <h5 className="font-bold text-emerald-800 dark:text-emerald-200 mb-2">
+                        👥{" "}
+                        {t(
+                          "projects.caixaAutoatendimento.results.customer.title",
+                        )}
+                      </h5>
+                      <ul className="text-emerald-700 dark:text-emerald-300 space-y-1">
+                        <li>
+                          •{" "}
+                          {t(
+                            "projects.caixaAutoatendimento.results.customer.item1",
+                          )}
+                        </li>
+                        <li>
+                          •{" "}
+                          {t(
+                            "projects.caixaAutoatendimento.results.customer.item2",
+                          )}
+                        </li>
+                        <li>
+                          •{" "}
+                          {t(
+                            "projects.caixaAutoatendimento.results.customer.item3",
+                          )}
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Technical Highlights */}
+              <div className="mb-12">
+                <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                  <span className="text-3xl mr-4">⭐</span>
+                  {t("projects.caixaAutoatendimento.highlights.title")}
+                </h4>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  <div className="bg-gradient-to-br from-green-50 to-teal-50 dark:from-green-900/20 dark:to-teal-900/20 rounded-xl p-6">
+                    <h5 className="font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                      <span className="text-xl mr-2">🏷️</span>
+                      {t("projects.caixaAutoatendimento.highlights.rfid.title")}
+                    </h5>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                      {t(
+                        "projects.caixaAutoatendimento.highlights.rfid.description",
+                      )}
+                    </p>
+                  </div>
+
+                  <div className="bg-gradient-to-br from-cyan-50 to-emerald-50 dark:from-cyan-900/20 dark:to-emerald-900/20 rounded-xl p-6">
+                    <h5 className="font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                      <span className="text-xl mr-2">📈</span>
+                      {t(
+                        "projects.caixaAutoatendimento.highlights.scalability.title",
+                      )}
+                    </h5>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                      {t(
+                        "projects.caixaAutoatendimento.highlights.scalability.description",
+                      )}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Hardware Integration */}
+              <div className="mb-12">
+                <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                  <span className="text-3xl mr-4">🔧</span>
+                  {t("projects.caixaAutoatendimento.hardwareIntegration.title")}
+                </h4>
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+                  <div className="bg-gray-50 dark:bg-dark-700 rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300 hover:scale-105">
+                    <div className="h-16 w-16 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <span className="text-2xl">🏪</span>
+                    </div>
+                    <h6 className="font-semibold text-gray-900 dark:text-white mb-2">
+                      {t(
+                        "projects.caixaAutoatendimento.hardwareIntegration.devices.kiosk.name",
+                      )}
+                    </h6>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                      {t(
+                        "projects.caixaAutoatendimento.hardwareIntegration.devices.kiosk.description",
+                      )}
+                    </p>
+                  </div>
+                  <div className="bg-gray-50 dark:bg-dark-700 rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300 hover:scale-105">
+                    <div className="h-16 w-16 bg-teal-100 dark:bg-teal-900 rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <span className="text-2xl">💳</span>
+                    </div>
+                    <h6 className="font-semibold text-gray-900 dark:text-white mb-2">
+                      {t(
+                        "projects.caixaAutoatendimento.hardwareIntegration.devices.payment.name",
+                      )}
+                    </h6>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                      {t(
+                        "projects.caixaAutoatendimento.hardwareIntegration.devices.payment.description",
+                      )}
+                    </p>
+                  </div>
+                  <div className="bg-gray-50 dark:bg-dark-700 rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300 hover:scale-105">
+                    <div className="h-16 w-16 bg-cyan-100 dark:bg-cyan-900 rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <span className="text-2xl">📡</span>
+                    </div>
+                    <h6 className="font-semibold text-gray-900 dark:text-white mb-2">
+                      {t(
+                        "projects.caixaAutoatendimento.hardwareIntegration.devices.rfid.name",
+                      )}
+                    </h6>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                      {t(
+                        "projects.caixaAutoatendimento.hardwareIntegration.devices.rfid.description",
+                      )}
+                    </p>
+                  </div>
+                  <div className="bg-gray-50 dark:bg-dark-700 rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300 hover:scale-105">
+                    <div className="h-16 w-16 bg-emerald-100 dark:bg-emerald-900 rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <span className="text-2xl">🔒</span>
+                    </div>
+                    <h6 className="font-semibold text-gray-900 dark:text-white mb-2">
+                      {t(
+                        "projects.caixaAutoatendimento.hardwareIntegration.devices.alarm.name",
+                      )}
+                    </h6>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                      {t(
+                        "projects.caixaAutoatendimento.hardwareIntegration.devices.alarm.description",
+                      )}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Demo & Screenshots */}
+              <div className="mb-12">
+                <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                  <span className="text-3xl mr-4">📱</span>
+                  {t("projects.caixaAutoatendimento.demo.title")}
+                </h4>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  <div className="bg-gradient-to-br from-green-50 to-teal-50 dark:from-green-900/20 dark:to-teal-900/20 rounded-xl p-6">
+                    <h5 className="font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                      <span className="text-xl mr-2">🏪</span>
+                      {t("projects.caixaAutoatendimento.demo.totem.title")}
+                    </h5>
+                    <div className="bg-white dark:bg-dark-800 rounded-lg p-4 shadow-lg">
+                      <img
+                        src="/images/renner-totem.jpeg"
+                        alt="Self-Checkout Station at Lojas Renner"
+                        className="w-full h-auto rounded-lg"
+                      />
+                    </div>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm mt-4 leading-relaxed">
+                      {t(
+                        "projects.caixaAutoatendimento.demo.totem.description",
+                      )}
+                    </p>
+                  </div>
+
+                  <div className="bg-gradient-to-br from-cyan-50 to-emerald-50 dark:from-cyan-900/20 dark:to-emerald-900/20 rounded-xl p-6">
+                    <h5 className="font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                      <span className="text-xl mr-2">💳</span>
+                      {t("projects.caixaAutoatendimento.demo.payment.title")}
+                    </h5>
+                    <div className="bg-white dark:bg-dark-800 rounded-lg p-4 shadow-lg">
+                      <img
+                        src="/images/aixa_autoatendimento_renner_credito_divulgacao-2048x1363.jpg"
+                        alt="Payment Interface at Self-Checkout"
+                        className="w-full h-auto rounded-lg"
+                      />
+                    </div>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm mt-4 leading-relaxed">
+                      {t(
+                        "projects.caixaAutoatendimento.demo.payment.description",
+                      )}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Footer */}
+              <div className="pt-8 border-t border-gray-200 dark:border-dark-700">
+                <div className="flex justify-center">
+                  <div className="flex flex-wrap gap-3 justify-center">
+                    <span className="px-4 py-2 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-sm rounded-full font-medium">
+                      RFID
+                    </span>
+                    <span className="px-4 py-2 bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200 text-sm rounded-full font-medium">
+                      Node.js
+                    </span>
+                    <span className="px-4 py-2 bg-cyan-100 dark:bg-cyan-900 text-cyan-800 dark:text-cyan-200 text-sm rounded-full font-medium">
+                      React
+                    </span>
+                    <span className="px-4 py-2 bg-emerald-100 dark:bg-emerald-900 text-emerald-800 dark:text-emerald-200 text-sm rounded-full font-medium">
+                      Payment APIs
+                    </span>
+                    <span className="px-4 py-2 bg-lime-100 dark:bg-lime-900 text-lime-800 dark:text-lime-200 text-sm rounded-full font-medium">
+                      Self-Checkout
+                    </span>
+                    <span className="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm rounded-full font-medium">
+                      Innovation
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>

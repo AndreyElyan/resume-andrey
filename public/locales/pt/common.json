@@ -182,6 +182,248 @@
         }
       },
       "viewPlatform": "Ver Plataforma ao Vivo"
+    },
+    "caixaAutoatendimento": {
+      "title": "Caixa de Autoatendimento com RFID – Inovação no Varejo",
+      "subtitle": "Lojas Renner • 2021-2023 • Desenvolvedor Full-Stack",
+      "description": "Projeto revolucionário de autoatendimento implementando tecnologia RFID no varejo de moda brasileiro, proporcionando aos clientes uma experiência de compra inovadora, ágil e eficiente.",
+      "challenge": {
+        "title": "Desafio & Contexto",
+        "problem": "A Lojas Renner precisava modernizar a experiência de compra e otimizar os processos de pagamento em",
+        "scale": "213 lojas em todo o país com 742 estações de autoatendimento",
+        "technical": "Implementação pioneira de tecnologia RFID no varejo de moda brasileiro, exigindo integração perfeita entre hardware, software e sistemas de pagamento."
+      },
+      "contribution": {
+        "title": "Minha Contribuição Técnica",
+        "architecture": "Desenvolvimento Full-Stack: Construiu sistemas integrados para estações de autoatendimento com tecnologia RFID",
+        "rfid": "Integração RFID: Implementou identificação por radiofrequência para escaneamento automático de produtos e gestão de estoque",
+        "payment": "Processamento de Pagamentos: Desenvolveu integração segura de pagamentos com múltiplos métodos (crédito, débito, cartão Renner)",
+        "ui": "Interface do Usuário: Criou interfaces touchscreen intuitivas para operações de autoatendimento do cliente",
+        "security": "Implementação de Segurança: Implementou desativação automática de alarmes e sistemas de prevenção de fraudes",
+        "scalability": "Escalabilidade: Projetou sistemas para suportar expansão rápida em múltiplas localizações de lojas"
+      },
+      "technologies": {
+        "title": "Tecnologias & Arquitetura",
+        "frontend": {
+          "title": "Frontend & UI",
+          "items": [
+            "Interface Touchscreen",
+            "React",
+            "UI de Pagamento",
+            "Experiência do Cliente"
+          ]
+        },
+        "backend": {
+          "title": "Backend & Integração",
+          "items": [
+            "Node.js",
+            "APIs de Pagamento",
+            "Middleware RFID",
+            "Gestão de Estoque"
+          ]
+        },
+        "hardware": {
+          "title": "Hardware & Dispositivos",
+          "items": [
+            "Leitores RFID",
+            "Terminais de Pagamento",
+            "Quiosques de Autoatendimento",
+            "Sistemas de Alarme"
+          ]
+        }
+      },
+      "results": {
+        "title": "Resultados & Impacto no Negócio",
+        "scale": {
+          "title": "Escala & Implementação",
+          "item1": "742 estações de autoatendimento implantadas em 213 lojas",
+          "item2": "Mais de 50% das lojas Renner agora possuem autoatendimento",
+          "item3": "Crescimento de 10x na implementação de 13 para 133 lojas em um ano"
+        },
+        "efficiency": {
+          "title": "Eficiência Operacional",
+          "item1": "87% de redução em rupturas de estoque através de rastreamento em tempo real",
+          "item2": "38% dos pagamentos processados através de estações de autoatendimento",
+          "item3": "Registro de produtos e processamento de pagamentos acelerados"
+        },
+        "innovation": {
+          "title": "Inovação & Liderança",
+          "item1": "Primeira varejista de moda no Brasil a implementar autoatendimento RFID",
+          "item2": "Pioneirou a adoção de tecnologia RFID no varejo brasileiro",
+          "item3": "Estabeleceu novos padrões para experiência do cliente no varejo de moda"
+        },
+        "customer": {
+          "title": "Experiência do Cliente",
+          "item1": "Processo de checkout mais rápido com leitura simultânea de itens",
+          "item2": "Experiência de compra autônoma com mínima interação com funcionários",
+          "item3": "Interface moderna e intuitiva para todos os segmentos de clientes"
+        }
+      },
+      "highlights": {
+        "title": "Destaques Técnicos",
+        "rfid": {
+          "title": "Implementação de Tecnologia RFID",
+          "description": "Implementou com sucesso tecnologia RFID para identificação automática de produtos, permitindo leitura simultânea de todos os itens comprados e eliminando a necessidade de escaneamento manual de códigos de barras."
+        },
+        "scalability": {
+          "title": "Escalabilidade Rápida",
+          "description": "Alcançou crescimento de 10x na implementação em um ano, expandindo de 13 para 133 lojas, demonstrando a escalabilidade e eficácia da solução de autoatendimento."
+        }
+      },
+      "hardwareIntegration": {
+        "title": "Hardware & Infraestrutura",
+        "devices": {
+          "kiosk": {
+            "name": "Quiosque de Autoatendimento",
+            "description": "Terminal touchscreen com leitor RFID integrado"
+          },
+          "payment": {
+            "name": "Terminal de Pagamento",
+            "description": "Dispositivo de processamento de pagamentos Cielo PPC 830"
+          },
+          "rfid": {
+            "name": "Leitor RFID",
+            "description": "Sistema de identificação por radiofrequência para escaneamento de produtos"
+          },
+          "alarm": {
+            "name": "Sistema de Segurança",
+            "description": "Desativação automática de alarmes após pagamento"
+          }
+        }
+      },
+      "demo": {
+        "title": "Implementação do Projeto",
+        "totem": {
+          "title": "Estação de Autoatendimento",
+          "description": "Quiosque moderno de autoatendimento com tecnologia RFID, proporcionando aos clientes uma experiência de compra autônoma e eficiente."
+        },
+        "payment": {
+          "title": "Interface de Pagamento",
+          "description": "Interface de pagamento intuitiva suportando múltiplos métodos de pagamento incluindo crédito, débito e opções de cartão Renner."
+        }
+      }
+    },
+    "vendaUnificada": {
+      "title": "Venda Unificada – Plataforma Omni Sale",
+      "subtitle": "Lojas Renner • Abr 2023 - Presente • Desenvolvedor Full-Stack",
+      "description": "Plataforma inovadora de vendas omnichannel integrando canais físicos e digitais para proporcionar uma experiência de compra unificada e conveniente para clientes da Lojas Renner.",
+      "challenge": {
+        "title": "Desafio & Contexto",
+        "problem": "A Lojas Renner precisava unificar todo o processo de compra em um só lugar, do login ao checkout, proporcionando uma jornada de compra perfeita em",
+        "scale": "500+ lojas físicas e plataforma de e-commerce",
+        "technical": "Desafios de integração entre sistemas legados e tecnologias móveis modernas, exigindo sincronização de estoque em tempo real e processamento seguro de pagamentos."
+      },
+      "contribution": {
+        "title": "Minha Contribuição Técnica",
+        "architecture": "Desenvolvimento Full-Stack: Construiu app mobile React Native com arquitetura Node.js BFF para integração perfeita",
+        "authentication": "Implementação de Segurança: Integrou Keycloak para autenticação e autorização de usuários com capacidades SSO",
+        "api": "Desenvolvimento de APIs: Projetou APIs GraphQL para comunicação eficiente cliente-servidor e sincronização de dados em tempo real",
+        "rfid": "Integração RFID: Implementou integração de dispositivos Bluebird para leitura precisa e rápida de produtos com tags RFID",
+        "payment": "Processamento de Pagamentos: Integrou dispositivos Pinpad para processo de checkout seguro e conveniente",
+        "mobile": "Desenvolvimento Mobile: Criou interface React Native intuitiva para associados de loja e clientes"
+      },
+      "technologies": {
+        "title": "Tecnologias & Arquitetura",
+        "mobile": {
+          "title": "Mobile & Frontend",
+          "items": ["React Native", "GraphQL", "Keycloak", "Mobile UI/UX"]
+        },
+        "backend": {
+          "title": "Backend & APIs",
+          "items": ["Node.js", "Arquitetura BFF", "GraphQL", "REST APIs"]
+        },
+        "hardware": {
+          "title": "Integração de Hardware",
+          "items": [
+            "Bluebird RFR900",
+            "Tags RFID",
+            "Dispositivos Pinpad",
+            "Sled Mobile"
+          ]
+        }
+      },
+      "results": {
+        "title": "Resultados & Impacto no Negócio",
+        "efficiency": {
+          "title": "Eficiência Operacional",
+          "item1": "Experiência de compra unificada em todos os canais",
+          "item2": "Sincronização de estoque em tempo real entre lojas e online",
+          "item3": "Processo de checkout otimizado com soluções de pagamento integradas"
+        },
+        "technology": {
+          "title": "Conquistas Técnicas",
+          "item1": "Leitura de produtos rápida e precisa com tecnologia RFID",
+          "item2": "Autenticação segura com integração Keycloak SSO",
+          "item3": "Interface mobile moderna para experiência aprimorada do usuário"
+        },
+        "business": {
+          "title": "Impacto no Negócio",
+          "item1": "Melhoria na satisfação do cliente com experiência unificada",
+          "item2": "Eficiência operacional aprimorada em lojas físicas",
+          "item3": "Integração perfeita entre canais digitais e físicos"
+        },
+        "innovation": {
+          "title": "Inovação & Escalabilidade",
+          "item1": "Implementação de tecnologia RFID de ponta",
+          "item2": "Arquitetura BFF escalável para crescimento futuro",
+          "item3": "Stack tecnológico moderno garantindo manutenibilidade"
+        }
+      },
+      "highlights": {
+        "title": "Destaques Técnicos",
+        "omnichannel": {
+          "title": "Integração Omnichannel",
+          "description": "Unificou com sucesso canais de vendas físicos e digitais, criando uma experiência de compra perfeita que permite aos clientes iniciar sua jornada em um canal e completá-la em outro."
+        },
+        "rfid": {
+          "title": "Implementação de Tecnologia RFID",
+          "description": "Integrou dispositivos Bluebird RFR900 com sled RFID para identificação precisa de produtos, permitindo gerenciamento rápido de estoque e recuperação precisa de informações de produtos em tempo real."
+        }
+      },
+      "hardwareIntegration": {
+        "title": "Integração de Hardware & Dispositivos",
+        "devices": {
+          "bluebird": {
+            "name": "Bluebird RFR900",
+            "description": "Leitor RFID móvel com sled para escaneamento de produtos"
+          },
+          "rfid": {
+            "name": "Tags RFID",
+            "description": "Tags de identificação de produtos para rastreamento de estoque"
+          },
+          "pinpad": {
+            "name": "Dispositivo Pinpad",
+            "description": "Terminal de processamento de pagamentos seguro"
+          },
+          "mobile": {
+            "name": "Interface Mobile",
+            "description": "App React Native para associados de loja"
+          }
+        }
+      },
+      "demo": {
+        "title": "Demo & Screenshots da Interface",
+        "productInterface": {
+          "title": "Interface de Consulta de Produtos",
+          "description": "Interface de consulta de produtos com integração RFID, permitindo aos associados verificar estoque e informações do produto em tempo real."
+        },
+        "mobileApp": {
+          "title": "Demo do App Mobile",
+          "description": "Demonstração real do aplicativo mobile em uso, mostrando a integração completa entre hardware RFID e interface mobile para consulta de produtos."
+        }
+      },
+      "rfidShowcase": {
+        "title": "Tecnologia RFID em Ação",
+        "subtitle": "Implementação Real de RFID",
+        "description": "Esta imagem mostra uma tag RFID real embutida em um produto da Lojas Renner, demonstrando a aplicação prática da nossa tecnologia omnichannel. A tag contém informações do produto, detalhes de tamanho e identificadores únicos que permitem rastreamento de estoque e atendimento ao cliente perfeitos.",
+        "details": {
+          "productCode": "Código do Produto:",
+          "epcCode": "Código EPC:",
+          "size": "Tamanho:",
+          "qrCode": "Código QR:",
+          "qrDescription": "Disponível para escaneamento mobile"
+        }
+      }
     }
   },
   "skills": {

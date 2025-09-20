@@ -182,6 +182,248 @@
         }
       },
       "viewPlatform": "View Live Platform"
+    },
+    "caixaAutoatendimento": {
+      "title": "Self-Checkout with RFID – Innovation in Retail",
+      "subtitle": "Lojas Renner • 2021-2023 • Full-Stack Developer",
+      "description": "Revolutionary self-checkout project implementing RFID technology in Brazilian fashion retail, providing customers with an innovative, agile, and efficient shopping experience.",
+      "challenge": {
+        "title": "Challenge & Context",
+        "problem": "Lojas Renner needed to modernize the shopping experience and streamline payment processes across",
+        "scale": "213 stores nationwide with 742 self-checkout stations",
+        "technical": "Pioneering RFID technology implementation in Brazilian fashion retail, requiring seamless integration between hardware, software, and payment systems."
+      },
+      "contribution": {
+        "title": "My Technical Contribution",
+        "architecture": "Full-Stack Development: Built integrated systems for self-checkout stations with RFID technology",
+        "rfid": "RFID Integration: Implemented radio-frequency identification for automatic product scanning and inventory management",
+        "payment": "Payment Processing: Developed secure payment integration with multiple methods (credit, debit, Renner card)",
+        "ui": "User Interface: Created intuitive touchscreen interfaces for customer self-service operations",
+        "security": "Security Implementation: Implemented automatic alarm deactivation and fraud prevention systems",
+        "scalability": "Scalability: Designed systems to support rapid expansion across multiple store locations"
+      },
+      "technologies": {
+        "title": "Technologies & Architecture",
+        "frontend": {
+          "title": "Frontend & UI",
+          "items": [
+            "Touchscreen Interface",
+            "React",
+            "Payment UI",
+            "Customer Experience"
+          ]
+        },
+        "backend": {
+          "title": "Backend & Integration",
+          "items": [
+            "Node.js",
+            "Payment APIs",
+            "RFID Middleware",
+            "Inventory Management"
+          ]
+        },
+        "hardware": {
+          "title": "Hardware & Devices",
+          "items": [
+            "RFID Readers",
+            "Payment Terminals",
+            "Self-Checkout Kiosks",
+            "Alarm Systems"
+          ]
+        }
+      },
+      "results": {
+        "title": "Results & Business Impact",
+        "scale": {
+          "title": "Scale & Deployment",
+          "item1": "742 self-checkout stations deployed across 213 stores",
+          "item2": "More than 50% of Renner stores now feature self-checkout",
+          "item3": "10x growth in deployment from 13 to 133 stores in one year"
+        },
+        "efficiency": {
+          "title": "Operational Efficiency",
+          "item1": "87% reduction in stockouts through real-time inventory tracking",
+          "item2": "38% of payments processed through self-checkout stations",
+          "item3": "Accelerated product registration and payment processing"
+        },
+        "innovation": {
+          "title": "Innovation & Leadership",
+          "item1": "First fashion retailer in Brazil to implement RFID self-checkout",
+          "item2": "Pioneered RFID technology adoption in Brazilian retail",
+          "item3": "Set new standards for customer experience in fashion retail"
+        },
+        "customer": {
+          "title": "Customer Experience",
+          "item1": "Faster checkout process with simultaneous item reading",
+          "item2": "Autonomous shopping experience with minimal staff interaction",
+          "item3": "Modern, intuitive interface for all customer segments"
+        }
+      },
+      "highlights": {
+        "title": "Technical Highlights",
+        "rfid": {
+          "title": "RFID Technology Implementation",
+          "description": "Successfully implemented RFID technology for automatic product identification, enabling simultaneous reading of all purchased items and eliminating the need for manual barcode scanning."
+        },
+        "scalability": {
+          "title": "Rapid Scalability",
+          "description": "Achieved 10x growth in deployment within one year, expanding from 13 to 133 stores, demonstrating the scalability and effectiveness of the self-checkout solution."
+        }
+      },
+      "hardwareIntegration": {
+        "title": "Hardware & Infrastructure",
+        "devices": {
+          "kiosk": {
+            "name": "Self-Checkout Kiosk",
+            "description": "Touchscreen terminal with integrated RFID reader"
+          },
+          "payment": {
+            "name": "Payment Terminal",
+            "description": "Cielo PPC 830 payment processing device"
+          },
+          "rfid": {
+            "name": "RFID Reader",
+            "description": "Radio-frequency identification system for product scanning"
+          },
+          "alarm": {
+            "name": "Security System",
+            "description": "Automatic alarm deactivation after payment"
+          }
+        }
+      },
+      "demo": {
+        "title": "Project Implementation",
+        "totem": {
+          "title": "Self-Checkout Station",
+          "description": "Modern self-checkout kiosk with RFID technology, providing customers with an autonomous and efficient shopping experience."
+        },
+        "payment": {
+          "title": "Payment Interface",
+          "description": "Intuitive payment interface supporting multiple payment methods including credit, debit, and Renner card options."
+        }
+      }
+    },
+    "vendaUnificada": {
+      "title": "Venda Unificada – Omni Sale Platform",
+      "subtitle": "Lojas Renner • Apr 2023 - Present • Full-Stack Developer",
+      "description": "Innovative omnichannel sales platform integrating physical and digital channels to provide a unified and convenient shopping experience for Lojas Renner customers.",
+      "challenge": {
+        "title": "Challenge & Context",
+        "problem": "Lojas Renner needed to unify the entire purchase process in one place, from login to checkout, providing a seamless shopping journey across",
+        "scale": "500+ physical stores and e-commerce platform",
+        "technical": "Integration challenges between legacy systems and modern mobile technologies, requiring real-time inventory synchronization and secure payment processing."
+      },
+      "contribution": {
+        "title": "My Technical Contribution",
+        "architecture": "Full-Stack Development: Built React Native mobile app with Node.js BFF architecture for seamless integration",
+        "authentication": "Security Implementation: Integrated Keycloak for user authentication and authorization with SSO capabilities",
+        "api": "API Development: Designed GraphQL APIs for efficient client-server communication and real-time data sync",
+        "rfid": "RFID Integration: Implemented Bluebird device integration for precise and fast product reading with RFID tags",
+        "payment": "Payment Processing: Integrated Pinpad devices for secure and convenient checkout process",
+        "mobile": "Mobile Development: Created intuitive React Native interface for store associates and customers"
+      },
+      "technologies": {
+        "title": "Technologies & Architecture",
+        "mobile": {
+          "title": "Mobile & Frontend",
+          "items": ["React Native", "GraphQL", "Keycloak", "Mobile UI/UX"]
+        },
+        "backend": {
+          "title": "Backend & APIs",
+          "items": ["Node.js", "BFF Architecture", "GraphQL", "REST APIs"]
+        },
+        "hardware": {
+          "title": "Hardware Integration",
+          "items": [
+            "Bluebird RFR900",
+            "RFID Tags",
+            "Pinpad Devices",
+            "Mobile Sled"
+          ]
+        }
+      },
+      "results": {
+        "title": "Results & Business Impact",
+        "efficiency": {
+          "title": "Operational Efficiency",
+          "item1": "Unified shopping experience across all channels",
+          "item2": "Real-time inventory synchronization between stores and online",
+          "item3": "Streamlined checkout process with integrated payment solutions"
+        },
+        "technology": {
+          "title": "Technical Achievements",
+          "item1": "Fast and precise product reading with RFID technology",
+          "item2": "Secure authentication with Keycloak SSO integration",
+          "item3": "Modern mobile interface for enhanced user experience"
+        },
+        "business": {
+          "title": "Business Impact",
+          "item1": "Improved customer satisfaction with unified experience",
+          "item2": "Enhanced operational efficiency in physical stores",
+          "item3": "Seamless integration between digital and physical channels"
+        },
+        "innovation": {
+          "title": "Innovation & Scalability",
+          "item1": "Cutting-edge RFID technology implementation",
+          "item2": "Scalable BFF architecture for future growth",
+          "item3": "Modern tech stack ensuring maintainability"
+        }
+      },
+      "highlights": {
+        "title": "Technical Highlights",
+        "omnichannel": {
+          "title": "Omnichannel Integration",
+          "description": "Successfully unified physical and digital sales channels, creating a seamless shopping experience that allows customers to start their journey in one channel and complete it in another."
+        },
+        "rfid": {
+          "title": "RFID Technology Implementation",
+          "description": "Integrated Bluebird RFR900 devices with RFID sled for precise product identification, enabling fast inventory management and accurate product information retrieval in real-time."
+        }
+      },
+      "hardwareIntegration": {
+        "title": "Hardware & Device Integration",
+        "devices": {
+          "bluebird": {
+            "name": "Bluebird RFR900",
+            "description": "Mobile RFID reader with sled for product scanning"
+          },
+          "rfid": {
+            "name": "RFID Tags",
+            "description": "Product identification tags for inventory tracking"
+          },
+          "pinpad": {
+            "name": "Pinpad Device",
+            "description": "Secure payment processing terminal"
+          },
+          "mobile": {
+            "name": "Mobile Interface",
+            "description": "React Native app for store associates"
+          }
+        }
+      },
+      "demo": {
+        "title": "Demo & Interface Screenshots",
+        "productInterface": {
+          "title": "Product Consultation Interface",
+          "description": "Product consultation interface with RFID integration, allowing associates to check stock and product information in real-time."
+        },
+        "mobileApp": {
+          "title": "Mobile App Demo",
+          "description": "Real mobile application demo in use, showing complete integration between RFID hardware and mobile interface for product consultation."
+        }
+      },
+      "rfidShowcase": {
+        "title": "RFID Technology in Action",
+        "subtitle": "Real RFID Implementation",
+        "description": "This image shows an actual RFID tag embedded in a Lojas Renner product, demonstrating the real-world application of our omnichannel technology. The tag contains product information, size details, and unique identifiers that enable seamless inventory tracking and customer service.",
+        "details": {
+          "productCode": "Product Code:",
+          "epcCode": "EPC Code:",
+          "size": "Size:",
+          "qrCode": "QR Code:",
+          "qrDescription": "Available for mobile scanning"
+        }
+      }
     }
   },
   "skills": {
