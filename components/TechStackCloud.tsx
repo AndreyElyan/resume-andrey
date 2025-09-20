@@ -184,7 +184,8 @@ const TechIcon = ({
     icon: "text-2xl sm:text-3xl",
     text: "text-xs sm:text-sm font-medium",
   };
-  const categoryColor = getCategoryColor() || "border-gray-500/30 bg-gray-500/5";
+  const categoryColor =
+    getCategoryColor() || "border-gray-500/30 bg-gray-500/5";
 
   return (
     <div
