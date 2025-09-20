@@ -172,7 +172,7 @@ const TechIcon = ({
       className="relative group"
       initial={{ opacity: 0, scale: 0.8 }}
       whileInView={{ opacity: 1, scale: 1 }}
-      viewport={{ once: true }}
+      viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.4, delay }}
       whileHover={{ scale: 1.05 }}
       onHoverStart={() => setIsHovered(true)}
@@ -240,20 +240,14 @@ const TechCategory = ({
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
+      viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.6, delay }}
       className="bg-white/5 dark:bg-gray-800/30 rounded-xl p-4 sm:p-6 border border-white/10 dark:border-gray-700/20 backdrop-blur-sm"
     >
-      <motion.h3
-        className="text-xl sm:text-2xl font-bold text-white mb-4 flex items-center"
-        initial={{ opacity: 0, x: -20 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: delay + 0.2 }}
-      >
+      <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 flex items-center">
         <span className="text-2xl mr-2">{icon}</span>
         {title}
-      </motion.h3>
+      </h3>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
         {technologies.map((tech, index) => (
@@ -276,76 +270,50 @@ const TechStackCloud = () => {
   const { t } = useTranslation("common");
   const [activeTab, setActiveTab] = useState("core");
 
+  const getCategoryData = (categoryKey: string) => {
+    try {
+      const title = t(`about.techStack.categories.${categoryKey}.title`);
+      const icon = t(`about.techStack.categories.${categoryKey}.icon`);
+      const technologies = t(
+        `about.techStack.categories.${categoryKey}.technologies`,
+        {
+          returnObjects: true,
+        },
+      ) as Array<{
+        name: string;
+        icon: string;
+        story: string;
+        size: TechSize;
+        category: string;
+      }>;
+
+      return { title, icon, technologies: technologies || [] };
+    } catch (error) {
+      console.error(`Error loading category ${categoryKey}:`, error);
+      return { title: categoryKey, icon: "🔧", technologies: [] };
+    }
+  };
+
   const categories = [
     {
       key: "frontend",
-      title: t("about.techStack.categories.frontend.title"),
-      icon: t("about.techStack.categories.frontend.icon"),
-      technologies: t("about.techStack.categories.frontend.technologies", {
-        returnObjects: true,
-      }) as Array<{
-        name: string;
-        icon: string;
-        story: string;
-        size: "large" | "medium" | "small";
-        category: string;
-      }>,
+      ...getCategoryData("frontend"),
     },
     {
       key: "backend",
-      title: t("about.techStack.categories.backend.title"),
-      icon: t("about.techStack.categories.backend.icon"),
-      technologies: t("about.techStack.categories.backend.technologies", {
-        returnObjects: true,
-      }) as Array<{
-        name: string;
-        icon: string;
-        story: string;
-        size: "large" | "medium" | "small";
-        category: string;
-      }>,
+      ...getCategoryData("backend"),
     },
     {
       key: "cloud",
-      title: t("about.techStack.categories.cloud.title"),
-      icon: t("about.techStack.categories.cloud.icon"),
-      technologies: t("about.techStack.categories.cloud.technologies", {
-        returnObjects: true,
-      }) as Array<{
-        name: string;
-        icon: string;
-        story: string;
-        size: "large" | "medium" | "small";
-        category: string;
-      }>,
+      ...getCategoryData("cloud"),
     },
     {
       key: "database",
-      title: t("about.techStack.categories.database.title"),
-      icon: t("about.techStack.categories.database.icon"),
-      technologies: t("about.techStack.categories.database.technologies", {
-        returnObjects: true,
-      }) as Array<{
-        name: string;
-        icon: string;
-        story: string;
-        size: "large" | "medium" | "small";
-        category: string;
-      }>,
+      ...getCategoryData("database"),
     },
     {
       key: "others",
-      title: t("about.techStack.categories.others.title"),
-      icon: t("about.techStack.categories.others.icon"),
-      technologies: t("about.techStack.categories.others.technologies", {
-        returnObjects: true,
-      }) as Array<{
-        name: string;
-        icon: string;
-        story: string;
-        size: "large" | "medium" | "small";
-        category: string;
-      }>,
+      ...getCategoryData("others"),
     },
   ];
 
@@ -439,43 +407,29 @@ const TechStackCloud = () => {
       </div>
 
       {/* Active Tab Content */}
-      <AnimatePresence mode="wait">
+      <div className="min-h-[200px]">
         {activeTab === "core" ? (
-          <motion.div
-            key="core"
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -20 }}
-            transition={{ duration: 0.3 }}
-          >
-            <div className="bg-white/5 dark:bg-gray-800/30 rounded-xl p-4 sm:p-6 border border-white/10 dark:border-gray-700/20 backdrop-blur-sm">
-              <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
-                <span className="text-xl mr-2">⭐</span>
-                Core Technologies
-              </h4>
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-                {coreTechnologies.map((tech, index) => (
-                  <TechIcon
-                    key={tech.name}
-                    name={tech.name}
-                    icon={tech.icon}
-                    story={tech.story}
-                    size={tech.size}
-                    category={tech.category}
-                    delay={0.1 + index * 0.1}
-                  />
-                ))}
-              </div>
+          <div className="bg-white/5 dark:bg-gray-800/30 rounded-xl p-4 sm:p-6 border border-white/10 dark:border-gray-700/20 backdrop-blur-sm">
+            <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
+              <span className="text-xl mr-2">⭐</span>
+              Core Technologies
+            </h4>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+              {coreTechnologies.map((tech, index) => (
+                <TechIcon
+                  key={tech.name}
+                  name={tech.name}
+                  icon={tech.icon}
+                  story={tech.story}
+                  size={tech.size}
+                  category={tech.category}
+                  delay={0.1 + index * 0.1}
+                />
+              ))}
             </div>
-          </motion.div>
+          </div>
         ) : (
-          <motion.div
-            key={activeTab}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -20 }}
-            transition={{ duration: 0.3 }}
-          >
+          <div>
             {categories
               .filter((cat) => cat.key === activeTab)
               .map((category) => (
@@ -487,9 +441,9 @@ const TechStackCloud = () => {
                   delay={0.1}
                 />
               ))}
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
+      </div>
     </>
   );
 };
