@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import HeroSection from "../components/sections/HeroSection";
 import AboutSection from "../components/sections/AboutSection";
 import ExperienceSection from "../components/sections/ExperienceSection";
-import ProjectsSection from "../components/sections/ProjectsSection";
+import ProjectsSectionNew from "../components/sections/ProjectsSectionNew";
 import SkillsSection from "../components/sections/SkillsSection";
 import CertificationsSection from "../components/sections/CertificationsSection";
 import ContactSection from "../components/sections/ContactSection";
@@ -26,7 +26,7 @@ const Home = () => {
         <HeroSection scrollToSection={scrollToSection} />
         <AboutSection />
         <ExperienceSection />
-        <ProjectsSection />
+        <ProjectsSectionNew />
         <SkillsSection />
         <CertificationsSection />
         <ContactSection />

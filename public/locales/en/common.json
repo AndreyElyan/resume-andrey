@@ -83,6 +83,14 @@
   },
   "projects": {
     "title": "Featured Projects",
+    "filters": {
+      "all": "All Projects",
+      "rfid": "RFID Solutions",
+      "omni": "Omnichannel",
+      "retail": "Retail Innovation"
+    },
+    "subtitle": "Things I've built",
+    "noProjectsFound": "No projects found for this category",
     "navigation": {
       "title": "Project Navigator",
       "subtitle": "Explore my featured projects",
@@ -95,7 +103,18 @@
       "projectOverview": "Project Overview",
       "technologies": "Technologies",
       "results": "Key Results",
-      "autoLoad": "Auto-load"
+      "autoLoad": "Auto-load",
+      "challenge": "Challenge & Context",
+      "contributions": "Technical Contributions",
+      "impact": "Impact & Results",
+      "costOptimization": "Cost Optimization",
+      "keyFeatures": "Key Features",
+      "pressCoverage": "Press Coverage",
+      "gallery": "Gallery",
+      "viewLiveDemo": "View Live Demo",
+      "viewGitHub": "View GitHub",
+      "backToProjects": "Back to Projects",
+      "architecture": "Architecture & Tech Stack"
     },
     "gbRastreio": {
       "title": "GB Rastreio – RFID Traceability Platform",
@@ -115,7 +134,8 @@
         "migration": "Data Migration: Proposed and implemented DynamoDB → S3 + Athena migration for analytics",
         "tagService": "Tag Service: Built robust EPC generation and serialization system",
         "security": "Security: Implemented granular RBAC with JSONB policies (ABAC)",
-        "rfid": "RFID Integration: Designed middleware for hardware communication"
+        "rfid": "RFID Integration: Designed middleware for hardware communication",
+        "cicd": "CI/CD Implementation: GitHub Actions + ArgoCD for automated deployments"
       },
       "technologies": {
         "title": "Technologies & Architecture",
@@ -162,6 +182,12 @@
           "item1": "Granular RBAC with JSONB policies",
           "item2": "Real-time monitoring and alerting",
           "item3": "Fault-tolerant microservices design"
+        },
+        "impactLabels": {
+          "storageCostReduction": "Storage Cost Reduction",
+          "rfidTagsMonth": "RFID Tags/Month",
+          "queryPerformance": "Query Performance",
+          "analyticsSavings": "Analytics Savings"
         }
       },
       "highlights": {
@@ -211,6 +237,11 @@
         "title": "Live Demo",
         "subtitle": "See the platform in action",
         "description": "Watch how the RFID traceability platform operates in real-time, showcasing its modern design, performance, and user experience."
+      },
+      "mediaAlt": {
+        "rfidDashboard": "RFID Solution Dashboard",
+        "cloudArchitecture": "Cloud Architecture",
+        "rfidHardware": "RFID Hardware"
       }
     },
     "caixaAutoatendimento": {
@@ -232,6 +263,42 @@
         "ui": "User Interface: Created intuitive touchscreen interfaces for customer self-service operations",
         "security": "Security Implementation: Implemented automatic alarm deactivation and fraud prevention systems",
         "scalability": "Scalability: Designed systems to support rapid expansion across multiple store locations"
+      },
+      "contributions": {
+        "selfCheckout": "Self-Checkout System",
+        "selfCheckoutDesc": "RFID-based kiosk implementation",
+        "paymentProcessing": "Payment Processing",
+        "paymentProcessingDesc": "Multiple payment methods integration",
+        "inventoryManagement": "Inventory Management",
+        "inventoryManagementDesc": "Real-time stock tracking and updates",
+        "securityFeatures": "Security Features",
+        "securityFeaturesDesc": "Automatic alarm deactivation system"
+      },
+      "impactLabels": {
+        "selfCheckoutStations": "Self-Checkout Stations",
+        "storesNationwide": "Stores Nationwide",
+        "stockoutReduction": "Stockout Reduction",
+        "selfCheckoutPayments": "Self-Checkout Payments"
+      },
+      "architecture": {
+        "title": "Architecture & Tech Stack",
+        "frontend": ["React", "Self-Checkout UI", "Touch Interface"],
+        "backend": ["Node.js", "Payment Gateway", "Inventory API"],
+        "hardware": ["RFID Readers", "Payment Terminals", "Security Systems"],
+        "integration": ["POS Systems", "Inventory Management", "Alarm Systems"]
+      },
+      "features": [
+        "RFID-based product scanning and identification",
+        "Multiple payment methods (credit, debit, PIX, cash)",
+        "Real-time inventory updates and stock management",
+        "Automatic security alarm deactivation",
+        "User-friendly touch interface",
+        "Integration with existing POS and inventory systems"
+      ],
+      "mediaAlt": {
+        "selfCheckoutKiosk": "Self-Checkout Kiosk",
+        "rfidTechnology": "RFID Technology",
+        "paymentProcess": "Payment Process"
       },
       "technologies": {
         "title": "Technologies & Architecture",
@@ -354,9 +421,9 @@
       }
     },
     "vendaUnificada": {
-      "title": "Venda Unificada – Omni Sale Platform",
+      "title": "Omni Sale Platform",
       "shortTitle": "Omni Sale",
-      "subtitle": "Lojas Renner • Apr 2023 - Present • Full-Stack Developer",
+      "subtitle": "Lojas Renner • Apr 2023 - 2024 • Full-Stack Developer",
       "description": "Innovative omnichannel sales platform integrating physical and digital channels to provide a unified and convenient shopping experience for Lojas Renner customers.",
       "challenge": {
         "title": "Challenge & Context",
@@ -372,6 +439,44 @@
         "rfid": "RFID Integration: Implemented Bluebird device integration for precise and fast product reading with RFID tags",
         "payment": "Payment Processing: Integrated Pinpad devices for secure and convenient checkout process",
         "mobile": "Mobile Development: Created intuitive React Native interface for store associates and customers"
+      },
+      "contributions": {
+        "mobileDev": "Mobile Development",
+        "mobileDevDesc": "React Native app with Bluebird device integration",
+        "auth": "Authentication",
+        "authDesc": "Keycloak SSO for secure user management",
+        "apiIntegration": "API Integration",
+        "apiIntegrationDesc": "GraphQL APIs with Node.js BFF architecture",
+        "paymentIntegration": "Payment Integration",
+        "paymentIntegrationDesc": "Pinpad integration for seamless checkout"
+      },
+      "impactLabels": {
+        "physicalStores": "Physical Stores",
+        "shoppingExperience": "Shopping Experience",
+        "inventorySync": "Inventory Sync",
+        "designApproach": "Design Approach"
+      },
+      "architecture": {
+        "title": "Architecture & Tech Stack",
+        "mobile": ["React Native", "Bluebird Device", "RFID Integration"],
+        "backend": ["Node.js", "GraphQL", "BFF Architecture"],
+        "auth": ["Keycloak", "SSO", "RBAC"],
+        "payment": ["Pinpad Integration", "Multiple Payment Methods"],
+        "hardware": ["Bluebird RFR900", "RFID Tags", "Mobile Sled"]
+      },
+      "features": [
+        "Unified shopping experience across physical and digital channels",
+        "Real-time inventory synchronization",
+        "RFID-based product scanning and identification",
+        "Secure authentication with Keycloak SSO",
+        "Seamless payment processing with pinpad integration",
+        "Mobile-first design for optimal user experience"
+      ],
+      "mediaAlt": {
+        "omniSaleInterface": "Omni Sale Interface",
+        "omnichannelIntegration": "Omnichannel Integration",
+        "rfidTagOnProduct": "RFID Tag on Product",
+        "realOmniSaleDemo": "Real Omni Sale Demo"
       },
       "technologies": {
         "title": "Technologies & Architecture",

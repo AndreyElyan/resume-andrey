@@ -83,6 +83,14 @@
   },
   "projects": {
     "title": "Projetos em Destaque",
+    "filters": {
+      "all": "Todos os Projetos",
+      "rfid": "Soluções RFID",
+      "omni": "Omnichannel",
+      "retail": "Inovação no Varejo"
+    },
+    "subtitle": "Coisas que construí",
+    "noProjectsFound": "Nenhum projeto encontrado para esta categoria",
     "navigation": {
       "title": "Navegador de Projetos",
       "subtitle": "Explore meus projetos em destaque",
@@ -95,7 +103,18 @@
       "projectOverview": "Visão Geral do Projeto",
       "technologies": "Tecnologias",
       "results": "Principais Resultados",
-      "autoLoad": "Carregamento automático"
+      "autoLoad": "Carregamento automático",
+      "challenge": "Desafio & Contexto",
+      "contributions": "Contribuições Técnicas",
+      "impact": "Impacto & Resultados",
+      "costOptimization": "Otimização de Custos",
+      "keyFeatures": "Principais Características",
+      "pressCoverage": "Cobertura da Imprensa",
+      "gallery": "Galeria",
+      "viewLiveDemo": "Ver Demo ao Vivo",
+      "viewGitHub": "Ver GitHub",
+      "backToProjects": "Voltar aos Projetos",
+      "architecture": "Arquitetura & Stack Tecnológico"
     },
     "gbRastreio": {
       "title": "GB Rastreio – Plataforma de Rastreabilidade RFID",
@@ -115,7 +134,8 @@
         "migration": "Migração de Dados: Propôs e implementou migração DynamoDB → S3 + Athena para analytics",
         "tagService": "Serviço de Tags: Construiu sistema robusto de geração e serialização de EPC",
         "security": "Segurança: Implementou RBAC granular com políticas JSONB (ABAC)",
-        "rfid": "Integração RFID: Projetou middleware para comunicação com hardware"
+        "rfid": "Integração RFID: Projetou middleware para comunicação com hardware",
+        "cicd": "Implementação CI/CD: GitHub Actions + ArgoCD para deployments automatizados"
       },
       "technologies": {
         "title": "Tecnologias & Arquitetura",
@@ -162,6 +182,12 @@
           "item1": "RBAC granular com políticas JSONB",
           "item2": "Monitoramento e alertas em tempo real",
           "item3": "Design de microserviços tolerante a falhas"
+        },
+        "impactLabels": {
+          "storageCostReduction": "Redução de Custos de Armazenamento",
+          "rfidTagsMonth": "Tags RFID/Mês",
+          "queryPerformance": "Performance de Consultas",
+          "analyticsSavings": "Economia em Analytics"
         }
       },
       "highlights": {
@@ -211,6 +237,11 @@
         "title": "Demo ao Vivo",
         "subtitle": "Veja a plataforma em ação",
         "description": "Assista como a plataforma de rastreabilidade RFID opera em tempo real, mostrando seu design moderno, performance e experiência do usuário."
+      },
+      "mediaAlt": {
+        "rfidDashboard": "Dashboard da Solução RFID",
+        "cloudArchitecture": "Arquitetura em Nuvem",
+        "rfidHardware": "Hardware RFID"
       }
     },
     "caixaAutoatendimento": {
@@ -232,6 +263,50 @@
         "ui": "Interface do Usuário: Criou interfaces touchscreen intuitivas para operações de autoatendimento do cliente",
         "security": "Implementação de Segurança: Implementou desativação automática de alarmes e sistemas de prevenção de fraudes",
         "scalability": "Escalabilidade: Projetou sistemas para suportar expansão rápida em múltiplas localizações de lojas"
+      },
+      "contributions": {
+        "selfCheckout": "Sistema de Autoatendimento",
+        "selfCheckoutDesc": "Implementação de quiosque baseado em RFID",
+        "paymentProcessing": "Processamento de Pagamento",
+        "paymentProcessingDesc": "Integração de múltiplos métodos de pagamento",
+        "inventoryManagement": "Gerenciamento de Inventário",
+        "inventoryManagementDesc": "Rastreamento e atualizações de estoque em tempo real",
+        "securityFeatures": "Recursos de Segurança",
+        "securityFeaturesDesc": "Sistema de desativação automática de alarmes"
+      },
+      "impactLabels": {
+        "selfCheckoutStations": "Estações de Autoatendimento",
+        "storesNationwide": "Lojas em Todo o País",
+        "stockoutReduction": "Redução de Rupturas",
+        "selfCheckoutPayments": "Pagamentos por Autoatendimento"
+      },
+      "architecture": {
+        "title": "Arquitetura & Stack Tecnológico",
+        "frontend": ["React", "UI de Autoatendimento", "Interface Touch"],
+        "backend": ["Node.js", "Gateway de Pagamento", "API de Inventário"],
+        "hardware": [
+          "Leitores RFID",
+          "Terminais de Pagamento",
+          "Sistemas de Segurança"
+        ],
+        "integration": [
+          "Sistemas POS",
+          "Gerenciamento de Inventário",
+          "Sistemas de Alarme"
+        ]
+      },
+      "features": [
+        "Escaneamento e identificação de produtos baseado em RFID",
+        "Múltiplos métodos de pagamento (crédito, débito, PIX, dinheiro)",
+        "Atualizações de inventário em tempo real e gerenciamento de estoque",
+        "Desativação automática de alarmes de segurança",
+        "Interface touch amigável ao usuário",
+        "Integração com sistemas POS e de inventário existentes"
+      ],
+      "mediaAlt": {
+        "selfCheckoutKiosk": "Quiosque de Autoatendimento",
+        "rfidTechnology": "Tecnologia RFID",
+        "paymentProcess": "Processo de Pagamento"
       },
       "technologies": {
         "title": "Tecnologias & Arquitetura",
@@ -356,7 +431,7 @@
     "vendaUnificada": {
       "title": "Venda Unificada – Plataforma Omni Sale",
       "shortTitle": "Venda Unificada",
-      "subtitle": "Lojas Renner • Abr 2023 - Presente • Desenvolvedor Full-Stack",
+      "subtitle": "Lojas Renner • Abr 2023 - 2024 • Desenvolvedor Full-Stack",
       "description": "Plataforma inovadora de vendas omnichannel integrando canais físicos e digitais para proporcionar uma experiência de compra unificada e conveniente para clientes da Lojas Renner.",
       "challenge": {
         "title": "Desafio & Contexto",
@@ -372,6 +447,44 @@
         "rfid": "Integração RFID: Implementou integração de dispositivos Bluebird para leitura precisa e rápida de produtos com tags RFID",
         "payment": "Processamento de Pagamentos: Integrou dispositivos Pinpad para processo de checkout seguro e conveniente",
         "mobile": "Desenvolvimento Mobile: Criou interface React Native intuitiva para associados de loja e clientes"
+      },
+      "contributions": {
+        "mobileDev": "Desenvolvimento Mobile",
+        "mobileDevDesc": "App React Native com integração do dispositivo Bluebird",
+        "auth": "Autenticação",
+        "authDesc": "Keycloak SSO para gerenciamento seguro de usuários",
+        "apiIntegration": "Integração de API",
+        "apiIntegrationDesc": "APIs GraphQL com arquitetura Node.js BFF",
+        "paymentIntegration": "Integração de Pagamento",
+        "paymentIntegrationDesc": "Integração de pinpad para checkout perfeito"
+      },
+      "impactLabels": {
+        "physicalStores": "Lojas Físicas",
+        "shoppingExperience": "Experiência de Compra",
+        "inventorySync": "Sincronização de Inventário",
+        "designApproach": "Abordagem de Design"
+      },
+      "architecture": {
+        "title": "Arquitetura & Stack Tecnológico",
+        "mobile": ["React Native", "Dispositivo Bluebird", "Integração RFID"],
+        "backend": ["Node.js", "GraphQL", "Arquitetura BFF"],
+        "auth": ["Keycloak", "SSO", "RBAC"],
+        "payment": ["Integração Pinpad", "Múltiplos Métodos de Pagamento"],
+        "hardware": ["Bluebird RFR900", "Tags RFID", "Sled Mobile"]
+      },
+      "features": [
+        "Experiência de compra unificada entre canais físicos e digitais",
+        "Sincronização de inventário em tempo real",
+        "Escaneamento e identificação de produtos baseado em RFID",
+        "Autenticação segura com Keycloak SSO",
+        "Processamento de pagamento perfeito com integração de pinpad",
+        "Design mobile-first para experiência otimizada do usuário"
+      ],
+      "mediaAlt": {
+        "omniSaleInterface": "Interface Omni Sale",
+        "omnichannelIntegration": "Integração Omnichannel",
+        "rfidTagOnProduct": "Tag RFID no Produto",
+        "realOmniSaleDemo": "Demo Real Omni Sale"
       },
       "technologies": {
         "title": "Tecnologias & Arquitetura",
