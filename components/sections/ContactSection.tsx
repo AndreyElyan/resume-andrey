@@ -35,50 +35,50 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="py-20"
+      className="py-20 bg-gray-50 dark:bg-dark-800"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="section-title"
+          className="text-center mb-16"
         >
-          {t("contact.title")}
-        </motion.h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            {t("contact.title")}
+          </h2>
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            {t("contact.subtitle")}
+          </p>
+        </motion.div>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
-          className="text-center text-xl text-gray-600 dark:text-gray-300 mb-12"
-        >
-          {t("contact.subtitle")}
-        </motion.p>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {contactLinks.map((link, index) => (
             <motion.a
-              key={link.name}
+              key={`contact-${index}-${link.name}`}
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              whileHover={{ scale: 1.05, y: -5 }}
               whileTap={{ scale: 0.95 }}
-              className="card p-6 text-center group"
+              className="bg-white dark:bg-dark-700 rounded-2xl p-6 text-center group shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-dark-600 h-full"
             >
-              <link.icon className="w-8 h-8 mx-auto mb-4 text-primary-600 dark:text-primary-400 group-hover:text-primary-700 dark:group-hover:text-primary-300 transition-colors duration-300" />
-              <h3 className="font-semibold text-gray-900 dark:text-white mb-1">
-                {link.name}
-              </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                {link.description}
-              </p>
+              <div className="flex flex-col items-center h-full">
+                <div className="mb-4">
+                  <link.icon className="w-10 h-10 text-primary-600 dark:text-primary-400 group-hover:text-primary-700 dark:group-hover:text-primary-300 transition-colors duration-300" />
+                </div>
+                <h3 className="font-bold text-gray-900 dark:text-white mb-2 text-lg">
+                  {link.name}
+                </h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400 break-words">
+                  {link.description}
+                </p>
+              </div>
             </motion.a>
           ))}
         </div>
