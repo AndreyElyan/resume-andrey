@@ -212,28 +212,11 @@ const AboutSection = () => {
             </div>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative"
-          >
-            <motion.div
-              className="bg-gradient-to-br from-primary-500 to-purple-600 rounded-2xl p-8 text-white"
-              initial={{ opacity: 0, scale: 0.9, rotateY: -15 }}
-              whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              whileHover={{
-                scale: 1.02,
-                rotateY: 5,
-                transition: { duration: 0.3 },
-              }}
-            >
+          <div className="relative">
+            <div className="bg-gradient-to-br from-primary-500 to-purple-600 rounded-2xl p-8 text-white">
               <TechStackCloud />
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
