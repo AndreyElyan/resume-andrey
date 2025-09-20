@@ -1,0 +1,134 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "certifications": "Certifications",
+    "contact": "Contact"
+  },
+  "home": {
+    "greeting": "Hi, I'm",
+    "name": "Andrey Elyan",
+    "role": "Senior Software Engineer | Node.js, TypeScript, NestJS, AWS, React | Microservices & CI/CD",
+    "cta": "Get In Touch",
+    "scroll": "Scroll to explore"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "Passionate about scalable microservices, AWS solutions, and RFID/data-pipeline technologies. I specialize in building robust backend systems and modern web applications that can handle high-scale operations.",
+    "passion": "My passion lies in creating efficient, maintainable code and implementing best practices in software development.",
+    "focus": "I focus on delivering high-quality solutions that meet business requirements while ensuring excellent performance and scalability."
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "current": "Present",
+    "positions": {
+      "boticario": {
+        "company": "Grupo Boticário",
+        "period": "2024 - Present",
+        "role": "Senior Software Engineer",
+        "description": "Developing NestJS microservices, AWS serverless applications, RFID integration systems, and CI/CD pipelines for scalable e-commerce solutions."
+      },
+      "renner": {
+        "company": "Lojas Renner",
+        "period": "2021 - 2024",
+        "role": "Software Engineer",
+        "description": "Built React applications, Node.js backends, GraphQL APIs, and RFID-based Omni Sale & Self-Checkout systems for retail operations."
+      },
+      "ilegra": {
+        "company": "Ilegra",
+        "period": "2019 - 2021",
+        "role": "Software Developer",
+        "description": "Developed internet banking solutions, NestJS BFF architecture, PIX payment integration, and serverless applications."
+      },
+      "4all": {
+        "company": "4all",
+        "period": "2018 - 2019",
+        "role": "Software Developer",
+        "description": "Worked on payment processing systems and financial technology solutions."
+      },
+      "linx": {
+        "company": "Linx",
+        "period": "2017 - 2018",
+        "role": "Software Developer",
+        "description": "Developed retail management systems and point-of-sale applications."
+      },
+      "sintech": {
+        "company": "Sintech",
+        "period": "2016 - 2017",
+        "role": "Software Developer",
+        "description": "Built enterprise software solutions and database management systems."
+      },
+      "militar": {
+        "company": "Colégio Militar",
+        "period": "2015 - 2016",
+        "role": "IT Support",
+        "description": "Provided technical support and maintained computer systems for educational institution."
+      },
+      "autonomo": {
+        "company": "Freelance",
+        "period": "2014 - 2015",
+        "role": "Web Developer",
+        "description": "Developed websites and web applications for various clients."
+      },
+      "bll": {
+        "company": "BLL",
+        "period": "2013 - 2014",
+        "role": "Junior Developer",
+        "description": "Started my career developing basic web applications and learning software development fundamentals."
+      }
+    }
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "viewCode": "View Code",
+    "liveDemo": "Live Demo",
+    "items": {
+      "microservice": {
+        "title": "E-commerce Microservice",
+        "description": "Scalable NestJS microservice with AWS Lambda, API Gateway, and DynamoDB for handling high-traffic e-commerce operations.",
+        "tech": "NestJS, AWS Lambda, DynamoDB, TypeScript"
+      },
+      "dashboard": {
+        "title": "Analytics Dashboard",
+        "description": "Real-time React dashboard with data visualization, user management, and responsive design for business intelligence.",
+        "tech": "React, TypeScript, Chart.js, TailwindCSS"
+      },
+      "rfid": {
+        "title": "RFID Integration System",
+        "description": "Complete RFID data pipeline system for retail operations with real-time processing and analytics.",
+        "tech": "Node.js, AWS Kinesis, PostgreSQL, Docker"
+      }
+    }
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "categories": {
+      "backend": "Backend",
+      "frontend": "Frontend",
+      "cloud": "Cloud & DevOps",
+      "database": "Database",
+      "tools": "Tools"
+    }
+  },
+  "certifications": {
+    "title": "Certifications & Honors",
+    "aws": "AWS Certified Solutions Architect",
+    "honor": "Honor to Merit | Brazilian Army"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Let's work together to build something amazing",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "whatsapp": "WhatsApp",
+    "resume": "Download Resume"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "built": "Built with Next.js and TailwindCSS"
+  }
+}
