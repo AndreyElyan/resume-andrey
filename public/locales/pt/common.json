@@ -485,9 +485,47 @@
     }
   },
   "certifications": {
-    "title": "Certificações e Honrarias",
-    "aws": "AWS Certified Solutions Architect",
-    "honor": "Honra ao Mérito | Exército Brasileiro"
+    "title": "Licenças e Certificações",
+    "subtitle": "Conquistas profissionais e reconhecimento",
+    "awsCloudPractitioner": {
+      "title": "AWS Cloud Practitioner Essentials",
+      "issuer": "Amazon Web Services (AWS)",
+      "date": "Set 2025",
+      "credentialId": "ef7cc783-cccf-4cc7-9de3-b39445d74e29",
+      "skills": "AWS Lambda · AWS Elastic Beanstalk · AWS",
+      "description": "Compreensão fundamental dos conceitos, serviços e soluções da AWS Cloud."
+    },
+    "awsDeveloperLab": {
+      "title": "Lab 3: AWS Certified Developer - Associate",
+      "issuer": "Amazon Web Services (AWS)",
+      "date": "Set 2025",
+      "credentialId": "c24db6e4-c489-40bf-aee9-e1643654b350",
+      "skills": "AWS",
+      "description": "Experiência prática em laboratório para a certificação AWS Certified Developer Associate."
+    },
+    "awsServerless": {
+      "title": "Arquiteturas Serverless usando Amazon CloudWatch Events e Scheduled Events com AWS Lambda",
+      "issuer": "Amazon Web Services (AWS)",
+      "date": "Set 2025",
+      "skills": "AWS · Amazon CloudWatch · AWS Lambda",
+      "description": "Padrões avançados de arquitetura serverless usando AWS Lambda e CloudWatch Events."
+    },
+    "fiapCloud": {
+      "title": "Fundamentos de Cloud, Administração e Solution Architect | AWS | GCP",
+      "issuer": "FIAP",
+      "date": "Fev 2024",
+      "credentialId": "192b8dce4361bb8cd30b5d7a80e8003b",
+      "skills": "Cloud Computing · AWS · Aplicações Cloud · Microsserviços",
+      "description": "Curso abrangente de computação em nuvem cobrindo AWS, GCP, fundamentos de cloud, administração e arquitetura de soluções."
+    },
+    "fiapLeadership": {
+      "title": "Comunicação de Liderança",
+      "issuer": "FIAP",
+      "date": "Fev 2024",
+      "credentialId": "5b1a2d5b5059881bbbc02e56a3aabb68",
+      "skills": "Liderança · Liderança de Equipe · Desenvolvimento de Liderança · Comunicações de Liderança",
+      "description": "Habilidades essenciais para comunicação e liderança eficazes, incluindo técnicas de apresentação e storytelling."
+    }
   },
   "contact": {
     "title": "Entre em Contato",

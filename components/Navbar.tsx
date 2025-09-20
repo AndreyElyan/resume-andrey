@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Sun, Moon, Globe } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +20,14 @@ const Navbar = () => {
       setIsDark(true);
       document.documentElement.classList.add("dark");
     }
-  }, []);
+
+    // Carrega o idioma preferido do localStorage
+    const savedLanguage = localStorage.getItem("preferred-language");
+    if (savedLanguage && savedLanguage !== router.locale) {
+      const { pathname, asPath, query } = router;
+      router.push({ pathname, query }, asPath, { locale: savedLanguage });
+    }
+  }, [router]);
 
   const toggleTheme = () => {
     setIsDark(!isDark);
@@ -34,7 +41,12 @@ const Navbar = () => {
   };
 
   const changeLanguage = (locale: string) => {
-    router.push(router.asPath, router.asPath, { locale });
+    // Salva o idioma selecionado no localStorage
+    localStorage.setItem("preferred-language", locale);
+
+    // Navega para o novo idioma
+    const { pathname, asPath, query } = router;
+    router.push({ pathname, query }, asPath, { locale });
   };
 
   const scrollToSection = (sectionId: string) => {

@@ -485,9 +485,47 @@
     }
   },
   "certifications": {
-    "title": "Certifications & Honors",
-    "aws": "AWS Certified Solutions Architect",
-    "honor": "Honor to Merit | Brazilian Army"
+    "title": "Licenses & Certifications",
+    "subtitle": "Professional achievements and recognition",
+    "awsCloudPractitioner": {
+      "title": "AWS Cloud Practitioner Essentials",
+      "issuer": "Amazon Web Services (AWS)",
+      "date": "Sep 2025",
+      "credentialId": "ef7cc783-cccf-4cc7-9de3-b39445d74e29",
+      "skills": "AWS Lambda · AWS Elastic Beanstalk · AWS",
+      "description": "Foundational understanding of AWS Cloud concepts, services, and solutions."
+    },
+    "awsDeveloperLab": {
+      "title": "Lab 3: AWS Certified Developer - Associate",
+      "issuer": "Amazon Web Services (AWS)",
+      "date": "Sep 2025",
+      "credentialId": "c24db6e4-c489-40bf-aee9-e1643654b350",
+      "skills": "AWS",
+      "description": "Hands-on lab experience for AWS Certified Developer Associate certification."
+    },
+    "awsServerless": {
+      "title": "Serverless Architectures using Amazon CloudWatch Events and Scheduled Events with AWS Lambda",
+      "issuer": "Amazon Web Services (AWS)",
+      "date": "Sep 2025",
+      "skills": "AWS · Amazon CloudWatch · AWS Lambda",
+      "description": "Advanced serverless architecture patterns using AWS Lambda and CloudWatch Events."
+    },
+    "fiapCloud": {
+      "title": "Cloud Fundamentals, Administration and Solution Architect | AWS | GCP",
+      "issuer": "FIAP",
+      "date": "Feb 2024",
+      "credentialId": "192b8dce4361bb8cd30b5d7a80e8003b",
+      "skills": "Cloud Computing · AWS · Cloud Applications · Microservices",
+      "description": "Comprehensive cloud computing course covering AWS, GCP, cloud fundamentals, administration, and solution architecture."
+    },
+    "fiapLeadership": {
+      "title": "Leadership Communication",
+      "issuer": "FIAP",
+      "date": "Feb 2024",
+      "credentialId": "5b1a2d5b5059881bbbc02e56a3aabb68",
+      "skills": "Leadership · Team Leadership · Leadership Development · Leadership Communications",
+      "description": "Essential skills for effective communication and leadership, including presentation techniques and storytelling."
+    }
   },
   "contact": {
     "title": "Get In Touch",
