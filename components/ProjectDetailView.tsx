@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useProjectData } from "../hooks/useProjectData";
 import ProjectHeader from "./projects/shared/ProjectHeader";
 import ChallengeSection from "./projects/shared/ChallengeSection";
@@ -40,6 +40,7 @@ const ProjectDetailView: React.FC<ProjectDetailViewProps> = ({
 }) => {
   const [isMobile, setIsMobile] = useState(false);
   const projectData = useProjectData(project.id);
+  const projectContentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const checkMobile = () => {
@@ -51,9 +52,18 @@ const ProjectDetailView: React.FC<ProjectDetailViewProps> = ({
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
+  useEffect(() => {
+    if (projectContentRef.current) {
+      projectContentRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }, [project.id]);
+
   if (isMobile) {
     return (
-      <div className="min-h-screen bg-gray-900 text-white">
+      <div className="min-h-screen bg-white dark:bg-dark-900 text-gray-900 dark:text-white">
         <ProjectNavigation
           onBackToProjects={onBackToProjects}
           onNextProject={onNextProject}
@@ -64,12 +74,14 @@ const ProjectDetailView: React.FC<ProjectDetailViewProps> = ({
         />
 
         <div className="px-4 pb-20">
-          <ProjectHeader
-            project={project}
-            heroImage={projectData.heroImage}
-            demoUrl={projectData.demoUrl}
-            isMobile={isMobile}
-          />
+          <div ref={projectContentRef}>
+            <ProjectHeader
+              project={project}
+              heroImage={projectData.heroImage}
+              demoUrl={projectData.demoUrl}
+              isMobile={isMobile}
+            />
+          </div>
 
           <ChallengeSection
             challenge={projectData.challenge}
@@ -122,7 +134,7 @@ const ProjectDetailView: React.FC<ProjectDetailViewProps> = ({
 
   // Desktop View
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
+    <div className="min-h-screen bg-white dark:bg-dark-900 text-gray-900 dark:text-white">
       <ProjectNavigation
         onBackToProjects={onBackToProjects}
         onNextProject={onNextProject}
@@ -133,12 +145,14 @@ const ProjectDetailView: React.FC<ProjectDetailViewProps> = ({
       />
 
       <div className="max-w-7xl mx-auto px-6 py-12">
-        <ProjectHeader
-          project={project}
-          heroImage={projectData.heroImage}
-          demoUrl={projectData.demoUrl}
-          isMobile={isMobile}
-        />
+        <div ref={projectContentRef}>
+          <ProjectHeader
+            project={project}
+            heroImage={projectData.heroImage}
+            demoUrl={projectData.demoUrl}
+            isMobile={isMobile}
+          />
+        </div>
 
         <ChallengeSection
           challenge={projectData.challenge}

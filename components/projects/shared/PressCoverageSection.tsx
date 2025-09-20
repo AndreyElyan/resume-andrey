@@ -20,10 +20,12 @@ const PressCoverageSection: React.FC<PressCoverageSectionProps> = ({
   const { t } = useTranslation("common");
 
   const containerClasses = isMobile
-    ? "bg-gray-800 rounded-2xl p-6"
-    : "bg-gray-800 rounded-2xl p-8";
+    ? "bg-white dark:bg-dark-700 rounded-2xl p-6 border border-gray-200 dark:border-dark-600"
+    : "bg-white dark:bg-dark-700 rounded-2xl p-8 border border-gray-200 dark:border-dark-600";
 
-  const titleClasses = isMobile ? "text-xl font-bold" : "text-3xl font-bold";
+  const titleClasses = isMobile
+    ? "text-xl font-bold text-gray-900 dark:text-white"
+    : "text-3xl font-bold text-gray-900 dark:text-white";
 
   const iconClasses = isMobile
     ? "text-2xl mr-3"
@@ -32,16 +34,16 @@ const PressCoverageSection: React.FC<PressCoverageSectionProps> = ({
   const gridClasses = isMobile ? "space-y-3" : "grid grid-cols-2 gap-6";
 
   const articleClasses = isMobile
-    ? "block p-3 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors"
-    : "block p-6 bg-gray-700 rounded-xl hover:bg-gray-600 transition-colors";
+    ? "block p-3 bg-gray-100 dark:bg-dark-600 rounded-lg hover:bg-gray-200 dark:hover:bg-dark-500 transition-colors"
+    : "block p-6 bg-gray-100 dark:bg-dark-600 rounded-xl hover:bg-gray-200 dark:hover:bg-dark-500 transition-colors";
 
   const articleTitleClasses = isMobile
     ? "font-semibold text-sm text-blue-400 mb-1"
     : "font-bold text-lg text-blue-400 mb-2";
 
   const articleSourceClasses = isMobile
-    ? "text-xs text-gray-400"
-    : "text-gray-400";
+    ? "text-xs text-gray-600 dark:text-gray-400"
+    : "text-gray-600 dark:text-gray-400";
 
   return (
     <motion.div

@@ -92,13 +92,21 @@ const MediaItem: React.FC<MediaItemProps> = ({
 
     {isMobile ? (
       <>
-        <p className="text-xs text-gray-400 mt-2">{item.alt}</p>
-        <p className="text-xs text-gray-500 mt-1">{item.src}</p>
+        <p className="text-xs text-gray-600 dark:text-gray-400 mt-2">
+          {item.alt}
+        </p>
+        <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">
+          {item.src}
+        </p>
       </>
     ) : (
       <>
-        <p className="text-gray-400 mt-3 text-center">{item.alt}</p>
-        <p className="text-gray-500 mt-1 text-center text-xs">{item.src}</p>
+        <p className="text-gray-600 dark:text-gray-400 mt-3 text-center">
+          {item.alt}
+        </p>
+        <p className="text-gray-500 dark:text-gray-500 mt-1 text-center text-xs">
+          {item.src}
+        </p>
       </>
     )}
   </button>
@@ -129,8 +137,8 @@ const MediaGallery: React.FC<MediaGalleryProps> = ({ media, isMobile }) => {
   }, [selectedMedia]);
 
   const titleClasses = isMobile
-    ? "text-xl font-bold mb-4"
-    : "text-3xl font-bold mb-8";
+    ? "text-xl font-bold mb-4 text-gray-900 dark:text-white"
+    : "text-3xl font-bold mb-8 text-gray-900 dark:text-white";
 
   const gridClasses = isMobile
     ? "flex space-x-4 overflow-x-auto pb-4"
@@ -141,8 +149,8 @@ const MediaGallery: React.FC<MediaGalleryProps> = ({ media, isMobile }) => {
     : "group cursor-pointer w-full";
 
   const mediaContainerClasses = isMobile
-    ? "relative h-32 rounded-xl overflow-hidden bg-gray-700 group"
-    : "relative h-48 rounded-xl overflow-hidden bg-gray-700 w-full";
+    ? "relative h-32 rounded-xl overflow-hidden bg-gray-200 dark:bg-dark-600 group"
+    : "relative h-48 rounded-xl overflow-hidden bg-gray-200 dark:bg-dark-600 w-full";
 
   return (
     <>
@@ -190,7 +198,7 @@ const MediaGallery: React.FC<MediaGalleryProps> = ({ media, isMobile }) => {
               </svg>
             </button>
 
-            <div className="bg-gray-900 rounded-xl overflow-hidden flex-1 flex flex-col">
+            <div className="bg-white dark:bg-dark-800 rounded-xl overflow-hidden flex-1 flex flex-col border border-gray-200 dark:border-dark-600">
               <div className="flex-1 flex items-center justify-center p-2">
                 {selectedMedia.type === "video" ? (
                   <video
@@ -213,11 +221,13 @@ const MediaGallery: React.FC<MediaGalleryProps> = ({ media, isMobile }) => {
                 )}
               </div>
 
-              <div className="p-4 border-t border-gray-700">
-                <h3 className="text-white text-lg font-semibold mb-2">
+              <div className="p-4 border-t border-gray-200 dark:border-gray-700">
+                <h3 className="text-gray-900 dark:text-white text-lg font-semibold mb-2">
                   {selectedMedia.alt}
                 </h3>
-                <p className="text-gray-400 text-sm">{selectedMedia.src}</p>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">
+                  {selectedMedia.src}
+                </p>
               </div>
             </div>
           </div>

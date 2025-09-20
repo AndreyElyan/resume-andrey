@@ -16,18 +16,20 @@ const ChallengeSection: React.FC<ChallengeSectionProps> = ({
   const { t } = useTranslation("common");
 
   const containerClasses = isMobile
-    ? "bg-gray-800 rounded-2xl p-6"
-    : "bg-gray-800 rounded-2xl p-8";
+    ? "bg-white dark:bg-dark-700 rounded-2xl p-6 border border-gray-200 dark:border-dark-600"
+    : "bg-white dark:bg-dark-700 rounded-2xl p-8 border border-gray-200 dark:border-dark-600";
 
-  const titleClasses = isMobile ? "text-xl font-bold" : "text-3xl font-bold";
+  const titleClasses = isMobile
+    ? "text-xl font-bold text-gray-900 dark:text-white"
+    : "text-3xl font-bold text-gray-900 dark:text-white";
 
   const iconClasses = isMobile
     ? "text-2xl mr-3"
     : "w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center mr-4";
 
   const textClasses = isMobile
-    ? "text-gray-300 text-sm leading-relaxed mb-4"
-    : "text-gray-300 text-lg leading-relaxed mb-4";
+    ? "text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4"
+    : "text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-4";
 
   const scaleClasses = isMobile
     ? "text-blue-400 text-sm mt-2 font-medium"

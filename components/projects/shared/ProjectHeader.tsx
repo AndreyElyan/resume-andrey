@@ -40,8 +40,12 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
         </div>
 
-        <h1 className="text-2xl font-bold mb-2">{project.title}</h1>
-        <p className="text-gray-300 text-sm mb-4">{project.subtitle}</p>
+        <h1 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">
+          {project.title}
+        </h1>
+        <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
+          {project.subtitle}
+        </p>
 
         {demoUrl && (
           <motion.button
@@ -73,8 +77,12 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({
             </div>
           </div>
 
-          <h1 className="text-5xl font-bold mb-4">{project.title}</h1>
-          <p className="text-xl text-gray-300 mb-6">{project.subtitle}</p>
+          <h1 className="text-5xl font-bold mb-4 text-gray-900 dark:text-white">
+            {project.title}
+          </h1>
+          <p className="text-xl text-gray-600 dark:text-gray-300 mb-6">
+            {project.subtitle}
+          </p>
 
           {demoUrl && (
             <motion.button
