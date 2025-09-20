@@ -15,8 +15,8 @@ const ContactSection = () => {
     {
       name: t("contact.linkedin"),
       icon: Linkedin,
-      href: "https://linkedin.com/in/andreyelyan",
-      description: "linkedin.com/in/andreyelyan",
+      href: "https://www.linkedin.com/in/andrey-elyan/",
+      description: "linkedin.com/in/andrey-elyan/",
     },
     {
       name: t("contact.github"),
