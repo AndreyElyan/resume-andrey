@@ -301,6 +301,25 @@
           "title": "Interface de Pagamento",
           "description": "Interface de pagamento intuitiva suportando múltiplos métodos de pagamento incluindo crédito, débito e opções de cartão Renner."
         }
+      },
+      "press": {
+        "title": "Cobertura da Imprensa & Mídia",
+        "subtitle": "Destaque em importantes publicações do varejo brasileiro",
+        "description": "O projeto de Autoatendimento com tecnologia RFID foi destacado em importantes publicações de varejo e tecnologia, demonstrando seu impacto inovador no mercado brasileiro.",
+        "articles": {
+          "mercadoeconsumo": {
+            "title": "Renner acelera implantação de caixas de autoatendimento",
+            "description": "Cobertura da rápida expansão da tecnologia de autoatendimento nas lojas Renner em todo o Brasil.",
+            "source": "Mercado e Consumo"
+          },
+          "renner": {
+            "title": "Renner acelera implantação de caixas de autoatendimento com tecnologia RFID",
+            "description": "Comunicado oficial destacando a implementação inovadora da tecnologia RFID e seu impacto na experiência do cliente.",
+            "source": "Lojas Renner S.A."
+          }
+        },
+        "readMore": "Ler Artigo Completo",
+        "externalLink": "Link Externo"
       }
     },
     "vendaUnificada": {

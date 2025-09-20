@@ -301,6 +301,25 @@
           "title": "Payment Interface",
           "description": "Intuitive payment interface supporting multiple payment methods including credit, debit, and Renner card options."
         }
+      },
+      "press": {
+        "title": "Press Coverage & Media",
+        "subtitle": "Featured in major Brazilian retail publications",
+        "description": "The Self-Checkout project with RFID technology has been highlighted in important retail and technology publications, demonstrating its innovative impact on the Brazilian market.",
+        "articles": {
+          "mercadoeconsumo": {
+            "title": "Renner accelerates implementation of self-checkout stations",
+            "description": "Coverage of the rapid expansion of self-checkout technology in Renner stores across Brazil.",
+            "source": "Mercado e Consumo"
+          },
+          "renner": {
+            "title": "Renner accelerates implementation of self-checkout stations with RFID technology",
+            "description": "Official press release highlighting the innovative RFID technology implementation and its impact on customer experience.",
+            "source": "Lojas Renner S.A."
+          }
+        },
+        "readMore": "Read Full Article",
+        "externalLink": "External Link"
       }
     },
     "vendaUnificada": {
