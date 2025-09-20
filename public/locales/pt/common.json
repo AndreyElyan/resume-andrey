@@ -17,9 +17,327 @@
   },
   "about": {
     "title": "Sobre Mim",
-    "description": "Apaixonado por microserviços escaláveis, soluções AWS e tecnologias RFID/pipeline de dados. Especializo-me em construir sistemas backend robustos e aplicações web modernas que podem lidar com operações de alta escala.",
-    "passion": "Minha paixão está em criar código eficiente e sustentável, implementando as melhores práticas em desenvolvimento de software.",
-    "focus": "Foco em entregar soluções de alta qualidade que atendem aos requisitos de negócio, garantindo excelente performance e escalabilidade."
+    "greeting": "Olá! 👋",
+    "intro": "Sou o Andrey, um desenvolvedor apaixonado por transformar ideias inovadoras em soluções digitais que impactam milhões de pessoas!",
+    "journey": "Minha jornada começou há mais de 8 anos, quando descobri que código não é apenas texto - é a linguagem que conecta sonhos à realidade. Desde então, tenho construído sistemas que processam milhões de transações, otimizam operações de varejo e revolucionam a experiência do cliente.",
+    "achievements": "🎯 Ao longo da carreira, já desenvolvi soluções que:",
+    "achievement1": "• Processam mais de 15 milhões de tags RFID mensalmente",
+    "achievement2": "• Reduziram custos operacionais em até 92%",
+    "achievement3": "• Impactam mais de 4.000 lojas em todo o Brasil",
+    "achievement4": "• Melhoraram a experiência de milhões de clientes",
+    "passion": "💡 Minha paixão? Transformar problemas complexos em soluções elegantes! Adoro trabalhar com tecnologias de ponta - desde microserviços serverless até sistemas RFID que parecem ficção científica, mas são realidade pura.",
+    "personality": "🚀 Quando não estou codificando, você me encontra explorando novas tecnologias, participando de hackathons ou simplesmente admirando como uma linha de código pode mudar o mundo. Acredito que a melhor tecnologia é aquela que as pessoas nem percebem que existe - ela simplesmente funciona perfeitamente.",
+    "mission": "🎯 Minha missão é criar soluções que não apenas funcionem, mas que inspirem. Cada projeto é uma oportunidade de aprender, inovar e deixar um legado tecnológico que faça a diferença.",
+    "cta": "Entre em Contato",
+    "techStack": {
+      "title": "🛠️ Meu Playground Tecnológico",
+      "subtitle": "Comecei hackeando no Delphi em 2014, depois migrei para o mundo JavaScript. Hoje passo meu tempo entre NestJS microservices, React UIs, e arquiteturas cloud com AWS Lambda, S3, Athena, DynamoDB, Kubernetes. Sempre buscando o próximo desafio — do código ao design de sistemas complexos.",
+      "categories": {
+        "frontend": {
+          "title": "Frontend",
+          "icon": "🎨",
+          "technologies": [
+            {
+              "name": "React",
+              "icon": "react",
+              "story": "Interfaces modernas no Self-Checkout Renner",
+              "size": "medium",
+              "category": "frontend"
+            },
+            {
+              "name": "Next.js",
+              "icon": "nextjs",
+              "story": "SSR e performance otimizada",
+              "size": "medium",
+              "category": "frontend"
+            },
+            {
+              "name": "React Native",
+              "icon": "react",
+              "story": "App mobile Omni Sale com Bluebird",
+              "size": "small",
+              "category": "frontend"
+            },
+            {
+              "name": "GraphQL",
+              "icon": "graphql",
+              "story": "APIs eficientes no GB Rastreio",
+              "size": "medium",
+              "category": "frontend"
+            }
+          ]
+        },
+        "backend": {
+          "title": "Backend",
+          "icon": "⚙️",
+          "technologies": [
+            {
+              "name": "Node.js",
+              "icon": "nodejs",
+              "story": "Base sólida para todos os projetos",
+              "size": "large",
+              "category": "backend"
+            },
+            {
+              "name": "NestJS",
+              "icon": "nestjs",
+              "story": "Microserviços escaláveis no Boticário",
+              "size": "large",
+              "category": "backend"
+            },
+            {
+              "name": "TypeScript",
+              "icon": "typescript",
+              "story": "Type safety em todos os projetos",
+              "size": "medium",
+              "category": "backend"
+            },
+            {
+              "name": "Express",
+              "icon": "express",
+              "story": "APIs REST robustas",
+              "size": "medium",
+              "category": "backend"
+            },
+            {
+              "name": "Fastify",
+              "icon": "fastify",
+              "story": "Framework web de alta performance",
+              "size": "small",
+              "category": "backend"
+            },
+            {
+              "name": "Jest",
+              "icon": "jest",
+              "story": "Framework de testes completo",
+              "size": "small",
+              "category": "backend"
+            },
+            {
+              "name": "Nodemon",
+              "icon": "nodemon",
+              "story": "Desenvolvimento com hot reload",
+              "size": "small",
+              "category": "backend"
+            }
+          ]
+        },
+        "cloud": {
+          "title": "Cloud & DevOps",
+          "icon": "☁️",
+          "technologies": [
+            {
+              "name": "AWS Lambda",
+              "icon": "lambda",
+              "story": "Serverless pipelines no GB Rastreio",
+              "size": "medium",
+              "category": "cloud"
+            },
+            {
+              "name": "DynamoDB",
+              "icon": "dynamodb",
+              "story": "NoSQL para alta performance",
+              "size": "medium",
+              "category": "cloud"
+            },
+            {
+              "name": "S3 + Athena",
+              "icon": "s3",
+              "story": "Data lake com 92% redução de custos",
+              "size": "medium",
+              "category": "cloud"
+            },
+            {
+              "name": "Docker",
+              "icon": "docker",
+              "story": "Containerização em todos os projetos",
+              "size": "medium",
+              "category": "cloud"
+            },
+            {
+              "name": "Kubernetes",
+              "icon": "kubernetes",
+              "story": "Orquestração de microserviços",
+              "size": "medium",
+              "category": "cloud"
+            },
+            {
+              "name": "GitHub Actions",
+              "icon": "github",
+              "story": "CI/CD automatizado",
+              "size": "small",
+              "category": "cloud"
+            },
+            {
+              "name": "EKS",
+              "icon": "eks",
+              "story": "Kubernetes gerenciado na AWS",
+              "size": "small",
+              "category": "cloud"
+            },
+            {
+              "name": "CloudWatch",
+              "icon": "cloudwatch",
+              "story": "Monitoramento e logs",
+              "size": "small",
+              "category": "cloud"
+            },
+            {
+              "name": "IAM",
+              "icon": "iam",
+              "story": "Controle de acesso e permissões",
+              "size": "small",
+              "category": "cloud"
+            },
+            {
+              "name": "Helm",
+              "icon": "helm",
+              "story": "Gerenciador de pacotes Kubernetes",
+              "size": "small",
+              "category": "cloud"
+            }
+          ]
+        },
+        "database": {
+          "title": "Databases",
+          "icon": "🗄️",
+          "technologies": [
+            {
+              "name": "PostgreSQL",
+              "icon": "postgresql",
+              "story": "Relacional confiável",
+              "size": "large",
+              "category": "database"
+            },
+            {
+              "name": "DynamoDB",
+              "icon": "dynamodb",
+              "story": "NoSQL para escala",
+              "size": "medium",
+              "category": "database"
+            },
+            {
+              "name": "DocumentDB",
+              "icon": "documentdb",
+              "story": "MongoDB compatível na AWS",
+              "size": "small",
+              "category": "database"
+            },
+            {
+              "name": "MongoDB",
+              "icon": "mongodb",
+              "story": "NoSQL orientado a documentos",
+              "size": "medium",
+              "category": "database"
+            },
+            {
+              "name": "Mongoose",
+              "icon": "mongoose",
+              "story": "ODM para MongoDB e Node.js",
+              "size": "small",
+              "category": "database"
+            },
+            {
+              "name": "Redis",
+              "icon": "redis",
+              "story": "Cache em memória de alta performance",
+              "size": "medium",
+              "category": "database"
+            },
+            {
+              "name": "Sequelize",
+              "icon": "sequelize",
+              "story": "ORM para PostgreSQL",
+              "size": "small",
+              "category": "database"
+            }
+          ]
+        },
+        "others": {
+          "title": "Outros",
+          "icon": "🔧",
+          "technologies": [
+            {
+              "name": "CI/CD",
+              "icon": "github",
+              "story": "Automação completa",
+              "size": "small",
+              "category": "others"
+            },
+            {
+              "name": "Microserviços",
+              "icon": "docker",
+              "story": "Arquitetura escalável",
+              "size": "small",
+              "category": "others"
+            },
+            {
+              "name": "Clean Architecture",
+              "icon": "typescript",
+              "story": "Código limpo e testável",
+              "size": "small",
+              "category": "others"
+            },
+            {
+              "name": "RFID Middleware",
+              "icon": "react",
+              "story": "Integração hardware-software",
+              "size": "small",
+              "category": "others"
+            },
+            {
+              "name": "Axios",
+              "icon": "axios",
+              "story": "Cliente HTTP para APIs",
+              "size": "small",
+              "category": "others"
+            },
+            {
+              "name": "Babel",
+              "icon": "babel",
+              "story": "Transpilação de código",
+              "size": "small",
+              "category": "others"
+            },
+            {
+              "name": "Swagger",
+              "icon": "swagger",
+              "story": "Documentação de APIs",
+              "size": "small",
+              "category": "others"
+            },
+            {
+              "name": "New Relic",
+              "icon": "newrelic",
+              "story": "APM e monitoramento",
+              "size": "small",
+              "category": "others"
+            },
+            {
+              "name": "OpenTelemetry",
+              "icon": "opentelemetry",
+              "story": "Observabilidade distribuída",
+              "size": "small",
+              "category": "others"
+            },
+            {
+              "name": "Date-fns",
+              "icon": "datefns",
+              "story": "Manipulação de datas",
+              "size": "small",
+              "category": "others"
+            },
+            {
+              "name": "Passport",
+              "icon": "passport",
+              "story": "Autenticação e autorização",
+              "size": "small",
+              "category": "others"
+            }
+          ]
+        }
+      }
+    }
   },
   "experience": {
     "title": "Experiência Profissional",

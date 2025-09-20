@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "next-i18next";
 import OptimizedImage from "../OptimizedImage";
+import TechStackCloud from "../TechStackCloud";
 
 const AboutSection = () => {
   const { t } = useTranslation("common");
@@ -53,15 +54,162 @@ const AboutSection = () => {
               </motion.div>
             </div>
 
-            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-              {t("about.description")}
-            </p>
-            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-              {t("about.passion")}
-            </p>
-            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-              {t("about.focus")}
-            </p>
+            <div className="space-y-6">
+              <motion.div
+                className="text-center lg:text-left"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+              >
+                <motion.h3
+                  className="text-2xl font-bold text-gray-800 dark:text-white mb-2"
+                  initial={{ scale: 0.8 }}
+                  whileInView={{ scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 0.2 }}
+                >
+                  {t("about.greeting")}
+                </motion.h3>
+                <motion.p
+                  className="text-xl text-primary-600 dark:text-primary-400 font-semibold mb-4"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                >
+                  {t("about.intro")}
+                </motion.p>
+              </motion.div>
+
+              <motion.p
+                className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+              >
+                {t("about.journey")}
+              </motion.p>
+
+              <motion.div
+                className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-xl p-6 border border-blue-200 dark:border-blue-800"
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
+              >
+                <motion.h4
+                  className="text-lg font-semibold text-gray-800 dark:text-white mb-4"
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 0.6 }}
+                >
+                  {t("about.achievements")}
+                </motion.h4>
+                <ul className="space-y-2 text-gray-700 dark:text-gray-300">
+                  {[
+                    t("about.achievement1"),
+                    t("about.achievement2"),
+                    t("about.achievement3"),
+                    t("about.achievement4"),
+                  ].map((achievement, index) => (
+                    <motion.li
+                      key={`achievement-${achievement.slice(0, 20)}`}
+                      className="flex items-start"
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: 0.7 + index * 0.05 }}
+                    >
+                      <motion.span
+                        className="text-green-500 mr-2"
+                        initial={{ scale: 0 }}
+                        whileInView={{ scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{
+                          duration: 0.3,
+                          delay: 0.8 + index * 0.05,
+                        }}
+                      >
+                        ✓
+                      </motion.span>
+                      <span>{achievement}</span>
+                    </motion.li>
+                  ))}
+                </ul>
+              </motion.div>
+
+              <motion.p
+                className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.9 }}
+              >
+                {t("about.passion")}
+              </motion.p>
+
+              <motion.p
+                className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 1.0 }}
+              >
+                {t("about.personality")}
+              </motion.p>
+
+              <motion.p
+                className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 1.1 }}
+              >
+                {t("about.mission")}
+              </motion.p>
+
+              <motion.div
+                className="bg-gradient-to-r from-primary-500 to-purple-600 rounded-xl p-6 text-white text-center cursor-pointer"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0 20px 40px rgba(0,0,0,0.2)",
+                  transition: { duration: 0.3 },
+                }}
+                animate={{
+                  boxShadow: [
+                    "0 10px 30px rgba(0,0,0,0.1)",
+                    "0 15px 35px rgba(0,0,0,0.15)",
+                    "0 10px 30px rgba(0,0,0,0.1)",
+                  ],
+                }}
+                transition={{
+                  duration: 0.5,
+                  delay: 1.2,
+                  boxShadow: {
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  },
+                }}
+              >
+                <motion.p
+                  className="text-lg font-semibold"
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 1.3 }}
+                >
+                  {t("about.cta")}
+                </motion.p>
+              </motion.div>
+            </div>
           </motion.div>
 
           <motion.div
@@ -71,35 +219,20 @@ const AboutSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            <div className="bg-gradient-to-br from-primary-500 to-purple-600 rounded-2xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-4">Tech Stack</h3>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <div className="h-2 bg-white/30 rounded-full">
-                    <div className="h-2 bg-white rounded-full w-4/5"></div>
-                  </div>
-                  <span className="text-sm">Node.js & TypeScript</span>
-                </div>
-                <div className="space-y-2">
-                  <div className="h-2 bg-white/30 rounded-full">
-                    <div className="h-2 bg-white rounded-full w-3/4"></div>
-                  </div>
-                  <span className="text-sm">AWS & Microservices</span>
-                </div>
-                <div className="space-y-2">
-                  <div className="h-2 bg-white/30 rounded-full">
-                    <div className="h-2 bg-white rounded-full w-5/6"></div>
-                  </div>
-                  <span className="text-sm">React & NestJS</span>
-                </div>
-                <div className="space-y-2">
-                  <div className="h-2 bg-white/30 rounded-full">
-                    <div className="h-2 bg-white rounded-full w-4/5"></div>
-                  </div>
-                  <span className="text-sm">CI/CD & DevOps</span>
-                </div>
-              </div>
-            </div>
+            <motion.div
+              className="bg-gradient-to-br from-primary-500 to-purple-600 rounded-2xl p-8 text-white"
+              initial={{ opacity: 0, scale: 0.9, rotateY: -15 }}
+              whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              whileHover={{
+                scale: 1.02,
+                rotateY: 5,
+                transition: { duration: 0.3 },
+              }}
+            >
+              <TechStackCloud />
+            </motion.div>
           </motion.div>
         </div>
       </div>
