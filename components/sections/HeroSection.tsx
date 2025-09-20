@@ -9,7 +9,7 @@ import {
   Zap,
 } from "lucide-react";
 import TypingEffect from "../TypingEffect";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 
 interface HeroSectionProps {
   scrollToSection: (sectionId: string) => void;
@@ -18,8 +18,10 @@ interface HeroSectionProps {
 const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
   const { t } = useTranslation("common");
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    setIsClient(true);
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
@@ -27,6 +29,25 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
+
+  const particles = useMemo(() => {
+    if (!isClient) return [];
+
+    return Array.from({ length: 50 }, (_, i) => {
+      const left = Math.random() * 100;
+      const top = Math.random() * 100;
+      const duration = Math.random() * 3 + 2;
+      const delay = Math.random() * 2;
+
+      return {
+        id: `particle-${i}-${left}-${top}`,
+        left,
+        top,
+        duration,
+        delay,
+      };
+    });
+  }, [isClient]);
 
   const floatingIcons = [
     { Icon: Code, delay: 0, x: 10, y: 20 },
@@ -59,32 +80,25 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
         />
 
         {/* Floating particles */}
-        {Array.from({ length: 50 }, (_, i) => {
-          const left = Math.random() * 100;
-          const top = Math.random() * 100;
-          const duration = Math.random() * 3 + 2;
-          const delay = Math.random() * 2;
-
-          return (
-            <motion.div
-              key={`particle-${i}-${left}-${top}`}
-              className="absolute w-1 h-1 bg-white/20 rounded-full"
-              style={{
-                left: `${left}%`,
-                top: `${top}%`,
-              }}
-              animate={{
-                y: [0, -100, 0],
-                opacity: [0, 1, 0],
-              }}
-              transition={{
-                duration: duration,
-                repeat: Infinity,
-                delay: delay,
-              }}
-            />
-          );
-        })}
+        {particles.map((particle) => (
+          <motion.div
+            key={particle.id}
+            className="absolute w-1 h-1 bg-white/20 rounded-full"
+            style={{
+              left: `${particle.left}%`,
+              top: `${particle.top}%`,
+            }}
+            animate={{
+              y: [0, -100, 0],
+              opacity: [0, 1, 0],
+            }}
+            transition={{
+              duration: particle.duration,
+              repeat: Infinity,
+              delay: particle.delay,
+            }}
+          />
+        ))}
 
         {/* Grid pattern */}
         <div className="absolute inset-0 opacity-10">
@@ -101,14 +115,16 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
         </div>
 
         {/* Mouse-following glow */}
-        <motion.div
-          className="absolute w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"
-          animate={{
-            x: mousePosition.x - 192,
-            y: mousePosition.y - 192,
-          }}
-          transition={{ type: "spring", stiffness: 50, damping: 15 }}
-        />
+        {isClient && (
+          <motion.div
+            className="absolute w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"
+            animate={{
+              x: mousePosition.x - 192,
+              y: mousePosition.y - 192,
+            }}
+            transition={{ type: "spring", stiffness: 50, damping: 15 }}
+          />
+        )}
       </div>
 
       {/* Floating Tech Icons */}

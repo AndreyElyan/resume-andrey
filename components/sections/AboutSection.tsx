@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "next-i18next";
-import Image from "next/image";
+import OptimizedImage from "../OptimizedImage";
 
 const AboutSection = () => {
   const { t } = useTranslation("common");
@@ -37,12 +37,14 @@ const AboutSection = () => {
                 className="relative"
               >
                 <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-primary-200 dark:border-primary-800 shadow-2xl">
-                  <Image
+                  <OptimizedImage
                     src="/images/profile-picture.jpeg"
                     alt="Andrey Elyan"
                     width={192}
                     height={192}
+                    priority={false}
                     className="w-full h-full object-cover"
+                    unoptimized={false}
                   />
                 </div>
                 <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white dark:border-dark-900 flex items-center justify-center">

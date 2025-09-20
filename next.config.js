@@ -17,5 +17,24 @@ module.exports = {
         pathname: "/**",
       },
     ],
+    dangerouslyAllowSVG: true,
+    contentDispositionType: "attachment",
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    unoptimized: true,
+  },
+  experimental: {
+    optimizePackageImports: ["framer-motion"],
+  },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === "production",
+  },
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+      };
+    }
+    return config;
   },
 };

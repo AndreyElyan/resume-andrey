@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "next-i18next";
-import Image from "next/image";
+import OptimizedImage from "../../OptimizedImage";
 
 interface ProjectHeaderProps {
   project: {
@@ -29,11 +29,12 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({
         className="mt-6"
       >
         <div className="relative h-48 rounded-2xl overflow-hidden mb-6">
-          <Image
+          <OptimizedImage
             src={heroImage}
             alt={project.title}
             width={400}
             height={192}
+            priority={false}
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
@@ -89,11 +90,12 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({
 
         <div className="relative">
           <div className="relative h-80 rounded-2xl overflow-hidden">
-            <Image
+            <OptimizedImage
               src={heroImage}
               alt={project.title}
               width={600}
               height={320}
+              priority={false}
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
