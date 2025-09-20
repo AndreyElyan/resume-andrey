@@ -19,10 +19,10 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-dark-900">
+    <div className="min-h-screen bg-white dark:bg-dark-900 overflow-x-hidden">
       <Navbar />
 
-      <main>
+      <main className="overflow-x-hidden">
         <HeroSection scrollToSection={scrollToSection} />
         <AboutSection />
         <ExperienceSection />

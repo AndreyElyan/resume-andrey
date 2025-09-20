@@ -16,9 +16,9 @@ const ProjectsSection = () => {
   return (
     <section
       id="projects"
-      className="py-20 bg-gray-50 dark:bg-dark-800"
+      className="py-20 bg-gray-50 dark:bg-dark-800 overflow-x-hidden"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-x-hidden">
         {/* Project Navigator */}
         <ProjectNavigator
           onProjectSelect={handleProjectSelect}
@@ -32,18 +32,18 @@ const ProjectsSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="mt-16 max-w-7xl mx-auto space-y-12"
+            className="mt-16 max-w-7xl mx-auto space-y-12 px-4 sm:px-0"
           >
             {/* Back to Navigator Button */}
-            <div className="flex justify-center mb-8">
+            <div className="flex justify-center mb-8 px-4 sm:px-0">
               <motion.button
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setSelectedProject(null)}
-                className="inline-flex items-center px-6 py-3 bg-gray-100 dark:bg-dark-700 hover:bg-gray-200 dark:hover:bg-dark-600 text-gray-700 dark:text-gray-300 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-xl border border-gray-200 dark:border-dark-600"
+                className="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-gray-100 dark:bg-dark-700 hover:bg-gray-200 dark:hover:bg-dark-600 text-gray-700 dark:text-gray-300 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-xl border border-gray-200 dark:border-dark-600 text-sm sm:text-base"
               >
                 <svg
-                  className="w-5 h-5 mr-2"
+                  className="w-4 h-4 sm:w-5 sm:h-5 mr-2"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -61,47 +61,6 @@ const ProjectsSection = () => {
             {/* GB Rastreio Project */}
             {selectedProject === "gbRastreio" && (
               <div className="bg-white dark:bg-dark-800 rounded-3xl shadow-2xl overflow-hidden border border-gray-200 dark:border-dark-700">
-                {/* Hero Banner */}
-                <div className="relative h-80 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 overflow-hidden">
-                  <div className="absolute inset-0 bg-black/20"></div>
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600/50 to-transparent"></div>
-
-                  <div className="relative z-10 p-8 h-full flex items-center justify-between">
-                    <div className="text-white max-w-3xl">
-                      <div className="flex items-center mb-6">
-                        <img
-                          src="/images/gb-rastreio-logo.png"
-                          alt="GB Rastreio Logo"
-                          className="h-16 w-auto mr-6"
-                        />
-                        <div>
-                          <h3 className="text-4xl font-bold mb-2">
-                            {t("projects.gbRastreio.title")}
-                          </h3>
-                          <p className="text-blue-200 text-lg">
-                            {t("projects.gbRastreio.subtitle")}
-                          </p>
-                        </div>
-                      </div>
-                      <p className="text-xl text-blue-100 leading-relaxed">
-                        {t("projects.gbRastreio.description")}
-                      </p>
-                    </div>
-
-                    <div className="hidden lg:flex space-x-4">
-                      <div className="w-20 h-20 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm border border-white/30">
-                        <span className="text-3xl">📡</span>
-                      </div>
-                      <div className="w-20 h-20 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm border border-white/30">
-                        <span className="text-3xl">🏭</span>
-                      </div>
-                      <div className="w-20 h-20 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm border border-white/30">
-                        <span className="text-3xl">☁️</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
                 <div className="p-8">
                   {/* Context & Problem */}
                   <div className="mb-12">
@@ -673,45 +632,6 @@ const ProjectsSection = () => {
             {/* Venda Unificada Project */}
             {selectedProject === "vendaUnificada" && (
               <div className="bg-white dark:bg-dark-800 rounded-3xl shadow-2xl overflow-hidden border border-gray-200 dark:border-dark-700">
-                {/* Hero Banner */}
-                <div className="relative h-80 bg-gradient-to-br from-pink-600 via-red-600 to-orange-600 overflow-hidden">
-                  <div className="absolute inset-0 bg-black/20"></div>
-                  <div className="absolute inset-0 bg-gradient-to-r from-pink-600/50 to-transparent"></div>
-
-                  <div className="relative z-10 p-8 h-full flex items-center justify-between">
-                    <div className="text-white max-w-3xl">
-                      <div className="flex items-center mb-6">
-                        <div className="h-16 w-16 bg-white/20 rounded-xl flex items-center justify-center mr-6 backdrop-blur-sm">
-                          <span className="text-3xl">🛍️</span>
-                        </div>
-                        <div>
-                          <h3 className="text-4xl font-bold mb-2">
-                            {t("projects.vendaUnificada.title")}
-                          </h3>
-                          <p className="text-pink-200 text-lg">
-                            {t("projects.vendaUnificada.subtitle")}
-                          </p>
-                        </div>
-                      </div>
-                      <p className="text-xl text-pink-100 leading-relaxed">
-                        {t("projects.vendaUnificada.description")}
-                      </p>
-                    </div>
-
-                    <div className="hidden lg:flex space-x-4">
-                      <div className="w-20 h-20 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm border border-white/30">
-                        <span className="text-3xl">📱</span>
-                      </div>
-                      <div className="w-20 h-20 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm border border-white/30">
-                        <span className="text-3xl">🏪</span>
-                      </div>
-                      <div className="w-20 h-20 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm border border-white/30">
-                        <span className="text-3xl">💳</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
                 <div className="p-8">
                   {/* Context & Problem */}
                   <div className="mb-12">
@@ -1249,45 +1169,6 @@ const ProjectsSection = () => {
             {/* Caixa de Autoatendimento Project */}
             {selectedProject === "caixaAutoatendimento" && (
               <div className="bg-white dark:bg-dark-800 rounded-3xl shadow-2xl overflow-hidden border border-gray-200 dark:border-dark-700">
-                {/* Hero Banner */}
-                <div className="relative h-80 bg-gradient-to-br from-green-600 via-teal-600 to-cyan-600 overflow-hidden">
-                  <div className="absolute inset-0 bg-black/20"></div>
-                  <div className="absolute inset-0 bg-gradient-to-r from-green-600/50 to-transparent"></div>
-
-                  <div className="relative z-10 p-8 h-full flex items-center justify-between">
-                    <div className="text-white max-w-3xl">
-                      <div className="flex items-center mb-6">
-                        <div className="h-16 w-16 bg-white/20 rounded-xl flex items-center justify-center mr-6 backdrop-blur-sm">
-                          <span className="text-3xl">🏪</span>
-                        </div>
-                        <div>
-                          <h3 className="text-4xl font-bold mb-2">
-                            {t("projects.caixaAutoatendimento.title")}
-                          </h3>
-                          <p className="text-green-200 text-lg">
-                            {t("projects.caixaAutoatendimento.subtitle")}
-                          </p>
-                        </div>
-                      </div>
-                      <p className="text-xl text-green-100 leading-relaxed">
-                        {t("projects.caixaAutoatendimento.description")}
-                      </p>
-                    </div>
-
-                    <div className="hidden lg:flex space-x-4">
-                      <div className="w-20 h-20 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm border border-white/30">
-                        <span className="text-3xl">💳</span>
-                      </div>
-                      <div className="w-20 h-20 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm border border-white/30">
-                        <span className="text-3xl">📱</span>
-                      </div>
-                      <div className="w-20 h-20 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm border border-white/30">
-                        <span className="text-3xl">🏷️</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
                 <div className="p-8">
                   {/* Context & Problem */}
                   <div className="mb-12">
