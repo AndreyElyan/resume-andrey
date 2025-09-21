@@ -25,9 +25,9 @@ const Home = () => {
       <main className="overflow-x-hidden">
         <HeroSection scrollToSection={scrollToSection} />
         <AboutSection />
-        <ExperienceSection />
         <ProjectsSectionNew />
         <SkillsSection />
+        <ExperienceSection />
         <CertificationsSection />
         <ContactSection />
       </main>
