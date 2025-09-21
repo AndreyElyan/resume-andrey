@@ -198,6 +198,15 @@ const AboutSection = () => {
                     ease: "easeInOut",
                   },
                 }}
+                onClick={() => {
+                  const contactSection = document.getElementById("contact");
+                  if (contactSection) {
+                    contactSection.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    });
+                  }
+                }}
               >
                 <motion.p
                   className="text-lg font-semibold"
