@@ -1,11 +1,6 @@
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { useTranslation } from "next-i18next";
-import {
-  ArrowRight,
-  Eye,
-  Github,
-  Linkedin,
-} from "lucide-react";
+import { ArrowRight, Eye, Github, Linkedin } from "lucide-react";
 import TypingEffect from "../TypingEffect";
 import { useEffect, useState, useMemo } from "react";
 import Image from "next/image";
@@ -124,7 +119,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
     },
     {
       name: "LinkedIn",
-      url: "https://www.linkedin.com/in/andrey-elyan-de-souza-29782a112/",
+      url: "https://www.linkedin.com/in/andrey-elyan/",
       Icon: Linkedin,
     },
   ];
@@ -349,7 +344,11 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
             transition={{ delay: 0.8, duration: 0.8 }}
             className="text-lg md:text-xl lg:text-2xl text-white/60 h-16 md:h-20 flex items-center justify-center max-w-4xl mx-auto"
           >
-            <TypingEffect text={t("home.role")} speed={40} delay={1800} />
+            <TypingEffect
+              text={t("home.role")}
+              speed={40}
+              delay={1800}
+            />
           </motion.div>
 
           {/* Stats Bar */}
@@ -458,7 +457,6 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
           </motion.div>
         </motion.div>
       </div>
-
     </section>
   );
 };
