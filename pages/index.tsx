@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Navbar from "../components/Navbar";
@@ -9,8 +10,10 @@ import ProjectsSectionNew from "../components/sections/ProjectsSectionNew";
 import SkillsSection from "../components/sections/SkillsSection";
 import CertificationsSection from "../components/sections/CertificationsSection";
 import ContactSection from "../components/sections/ContactSection";
+import Terminal, { TerminalButton } from "../components/Terminal";
 
 const Home = () => {
+  const [isTerminalOpen, setIsTerminalOpen] = useState(false);
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -33,6 +36,13 @@ const Home = () => {
       </main>
 
       <Footer />
+
+      {/* Interactive Terminal */}
+      <TerminalButton onClick={() => setIsTerminalOpen(true)} />
+      <Terminal
+        isOpen={isTerminalOpen}
+        onClose={() => setIsTerminalOpen(false)}
+      />
     </div>
   );
 };
