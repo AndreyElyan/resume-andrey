@@ -60,7 +60,6 @@ const Navbar = () => {
   const navItems = [
     { key: "home", id: "home" },
     { key: "about", id: "about" },
-    { key: "experience", id: "experience" },
     { key: "projects", id: "projects" },
     { key: "skills", id: "skills" },
     { key: "certifications", id: "certifications" },

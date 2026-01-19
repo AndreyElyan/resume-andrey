@@ -12,8 +12,21 @@
     "greeting": "Olá, eu sou",
     "name": "Andrey Elyan",
     "role": "Engenheiro de Software Sênior | Node.js, TypeScript, NestJS, AWS, React | Microserviços & CI/CD",
-    "cta": "Entre em Contato",
-    "scroll": "Role para explorar"
+    "cta": "Vamos Construir Algo",
+    "viewWork": "Ver Meus Projetos",
+    "downloadResume": "Baixar Currículo",
+    "scroll": "Role para explorar",
+    "availableStatus": "Disponível para Novos Projetos",
+    "stats": {
+      "coffee": "∞",
+      "coffeeLabel": "Xícaras de Café",
+      "commits": "5K+",
+      "commitsLabel": "Git Commits",
+      "bugs": "99",
+      "bugsLabel": "Bugs Corrigidos (falta 1)",
+      "stackoverflow": "342",
+      "stackoverflowLabel": "Abas do StackOverflow"
+    }
   },
   "about": {
     "title": "Sobre Mim",
