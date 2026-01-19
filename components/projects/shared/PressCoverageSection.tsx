@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "next-i18next";
+import { Newspaper, ExternalLink } from "lucide-react";
 
 interface PressArticle {
   title: string;
@@ -19,32 +20,6 @@ const PressCoverageSection: React.FC<PressCoverageSectionProps> = ({
 }) => {
   const { t } = useTranslation("common");
 
-  const containerClasses = isMobile
-    ? "bg-white dark:bg-dark-700 rounded-2xl p-6 border border-gray-200 dark:border-dark-600"
-    : "bg-white dark:bg-dark-700 rounded-2xl p-8 border border-gray-200 dark:border-dark-600";
-
-  const titleClasses = isMobile
-    ? "text-xl font-bold text-gray-900 dark:text-white"
-    : "text-3xl font-bold text-gray-900 dark:text-white";
-
-  const iconClasses = isMobile
-    ? "text-2xl mr-3"
-    : "w-12 h-12 bg-red-600 rounded-xl flex items-center justify-center mr-4";
-
-  const gridClasses = isMobile ? "space-y-3" : "grid grid-cols-2 gap-6";
-
-  const articleClasses = isMobile
-    ? "block p-3 bg-gray-100 dark:bg-dark-600 rounded-lg hover:bg-gray-200 dark:hover:bg-dark-500 transition-colors"
-    : "block p-6 bg-gray-100 dark:bg-dark-600 rounded-xl hover:bg-gray-200 dark:hover:bg-dark-500 transition-colors";
-
-  const articleTitleClasses = isMobile
-    ? "font-semibold text-sm text-blue-400 mb-1"
-    : "font-bold text-lg text-blue-400 mb-2";
-
-  const articleSourceClasses = isMobile
-    ? "text-xs text-gray-600 dark:text-gray-400"
-    : "text-gray-600 dark:text-gray-400";
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -52,31 +27,39 @@ const PressCoverageSection: React.FC<PressCoverageSectionProps> = ({
       transition={{ delay: 0.7 }}
       className={isMobile ? "mt-6" : "mb-16"}
     >
-      <div className={containerClasses}>
-        <div className="flex items-center mb-4">
-          {isMobile ? (
-            <span className={iconClasses}>📰</span>
-          ) : (
-            <div className={iconClasses}>
-              <span className="text-2xl">📰</span>
-            </div>
-          )}
-          <h2 className={titleClasses}>
+      <div className="backdrop-blur-xl bg-white/5 rounded-2xl p-6 md:p-8 border border-white/10 hover:border-white/20 transition-colors duration-300">
+        <div className="flex items-center mb-6 gap-3">
+          <div className={`${isMobile ? "w-10 h-10" : "w-12 h-12"} backdrop-blur-xl bg-gradient-to-br from-red-500/20 to-pink-500/20 rounded-xl flex items-center justify-center border border-white/10`}>
+            <Newspaper className={`${isMobile ? "w-5 h-5" : "w-6 h-6"} text-red-400`} />
+          </div>
+          <h2 className={`${isMobile ? "text-xl" : "text-3xl"} font-bold text-white`}>
             {t("projects.navigation.pressCoverage")}
           </h2>
         </div>
-        <div className={gridClasses}>
-          {pressCoverage.map((article) => (
-            <a
+        <div className={isMobile ? "space-y-3" : "grid grid-cols-2 gap-4"}>
+          {pressCoverage.map((article, index) => (
+            <motion.a
               key={article.title}
               href={article.url}
               target="_blank"
               rel="noopener noreferrer"
-              className={articleClasses}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8 + index * 0.1 }}
+              className="block p-4 rounded-xl bg-white/5 border border-white/10 hover:border-purple-500/30 hover:bg-purple-500/5 transition-all duration-300 group"
             >
-              <h3 className={articleTitleClasses}>{article.title}</h3>
-              <p className={articleSourceClasses}>{article.source}</p>
-            </a>
+              <div className="flex items-start justify-between gap-2">
+                <div>
+                  <h3 className={`font-semibold ${isMobile ? "text-sm" : "text-base"} text-white group-hover:text-purple-400 transition-colors mb-1`}>
+                    {article.title}
+                  </h3>
+                  <p className={`${isMobile ? "text-xs" : "text-sm"} text-white/50`}>
+                    {article.source}
+                  </p>
+                </div>
+                <ExternalLink className="w-4 h-4 text-white/30 group-hover:text-purple-400 transition-colors flex-shrink-0 mt-1" />
+              </div>
+            </motion.a>
           ))}
         </div>
       </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "next-i18next";
+import { TrendingDown } from "lucide-react";
 
 interface CostOptimizationSectionProps {
   costOptimization: {
@@ -16,22 +17,6 @@ const CostOptimizationSection: React.FC<CostOptimizationSectionProps> = ({
 }) => {
   const { t } = useTranslation("common");
 
-  const containerClasses = isMobile
-    ? "bg-white dark:bg-dark-700 rounded-2xl p-6 border border-gray-200 dark:border-dark-600"
-    : "bg-white dark:bg-dark-700 rounded-2xl p-8 border border-gray-200 dark:border-dark-600";
-
-  const titleClasses = isMobile
-    ? "text-xl font-bold text-gray-900 dark:text-white"
-    : "text-3xl font-bold text-gray-900 dark:text-white";
-
-  const iconClasses = isMobile
-    ? "text-2xl mr-3"
-    : "w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center mr-4";
-
-  const textClasses = isMobile
-    ? "text-gray-600 dark:text-gray-300 text-sm leading-relaxed"
-    : "text-gray-600 dark:text-gray-300 text-lg leading-relaxed";
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -39,27 +24,26 @@ const CostOptimizationSection: React.FC<CostOptimizationSectionProps> = ({
       transition={{ delay: 0.5 }}
       className={isMobile ? "mt-6" : "mb-16"}
     >
-      <div className={containerClasses}>
-        <div className="flex items-center mb-4">
-          {isMobile ? (
-            <span className={iconClasses}>💰</span>
-          ) : (
-            <div className={iconClasses}>
-              <span className="text-2xl">💰</span>
-            </div>
-          )}
-          <h2 className={titleClasses}>
+      <div className="backdrop-blur-xl bg-white/5 rounded-2xl p-6 md:p-8 border border-white/10 hover:border-white/20 transition-colors duration-300">
+        <div className="flex items-center mb-6 gap-3">
+          <div className={`${isMobile ? "w-10 h-10" : "w-12 h-12"} backdrop-blur-xl bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center border border-white/10`}>
+            <TrendingDown className={`${isMobile ? "w-5 h-5" : "w-6 h-6"} text-green-400`} />
+          </div>
+          <h2 className={`${isMobile ? "text-xl" : "text-3xl"} font-bold text-white`}>
             {t("projects.navigation.costOptimization")}
           </h2>
         </div>
         <div className={isMobile ? "space-y-3" : "space-y-4"}>
-          {costOptimization.details.map((detail) => (
-            <p
+          {costOptimization.details.map((detail, index) => (
+            <motion.p
               key={detail.substring(0, 50)}
-              className={textClasses}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 + index * 0.1 }}
+              className={`text-white/70 ${isMobile ? "text-sm" : "text-lg"} leading-relaxed pl-4 border-l-2 border-green-500/30`}
             >
               {detail}
-            </p>
+            </motion.p>
           ))}
         </div>
       </div>
